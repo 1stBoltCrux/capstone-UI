@@ -1,6 +1,7 @@
 .home-wrapper {
   margin: auto;
   width: 350px;
+  background-image: url(./../imgs/swordfern.png);
 
 
 }
@@ -12,6 +13,7 @@
   background-image: url(./../imgs/nav-logo.png);
   height: 150px;
   width: 100%;
+  margin-bottom: 4vh;
 }
 
 .nav-button {
@@ -25,4 +27,37 @@
   border-radius: 5px;
   width: 22%;
   margin: 0 3% 2% 3%;
+}
+
+.filters {
+  margin: auto;
+  width: 87%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-route {
+  height: 166px;
+  background-image: url(./../imgs/filtermenu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 4vh;
+}
+
+#filter-title {
+  color: #89DA2F;
+}
+
+.filter-box {
+  padding: 0 15px 0 15px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.filter-box .title {
+  color: #89DA2F;
 }
