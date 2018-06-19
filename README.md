@@ -12,8 +12,8 @@ This app will populate a list of routes at Ozone using Mountainproject.com's API
 
 ## Sketch Wireframe
 
-<img src='./screenshots/zone-mobile.png>
-<img src='./screenshots/zone-symbols.png>
+<img src='./screenshots/zone-mobile.png' alt='a screenshot of the mobile app layout'>
+<img src='./screenshots/zone-symbols.png' alt='a screenshot of the symbols created in sketch for this app'>
 
 ## Setup/Installation Requirements
 
