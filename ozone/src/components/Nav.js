@@ -8,6 +8,7 @@ class List extends React.Component {
       <div className='nav-wrapper'>
         <div className='nav'>
           <div className='nav-button'><p>My List</p></div>
+          <div className='nav-button'><p>Home</p></div>
           <div className='nav-button'>Route List</div>
         </div>
       </div>
