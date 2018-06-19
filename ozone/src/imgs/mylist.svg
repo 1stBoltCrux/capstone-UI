@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="30px" viewBox="0 0 100 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>listbutton copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FAFAFA">
+            <tspan x="21.4970703" y="20">My List</tspan>
+        </text>
+        <filter x="-6.0%" y="-25.0%" width="114.0%" height="170.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-2" transform="translate(-13.000000, -103.000000)">
+            <g id="listbutton-copy-2" transform="translate(13.000000, 103.000000)">
+                <rect id="Rectangle-12" stroke="#FEFEFE" stroke-width="2" x="1" y="1" width="98" height="28" rx="5"></rect>
+                <g id="My-List" fill="#FAFAFA" fill-opacity="1">
+                    <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                    <use xlink:href="#text-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
