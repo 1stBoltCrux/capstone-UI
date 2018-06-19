@@ -1,0 +1,27 @@
+.nav-wrapper {
+  margin: auto;
+  width: 350px;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-image: url(./../imgs/nav-logo.png);
+  height: 150px;
+  width: 100%;
+
+}
+
+.nav-button {
+  font-size: .9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 30px;
+  border: solid 2px white;
+  border-radius: 5px;
+  width: 22%;
+  margin: 0 3% 2% 3%;
+}
