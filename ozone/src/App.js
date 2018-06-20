@@ -14,10 +14,6 @@ class App extends Component {
       <div className='main-wrapper'>
         <Nav></Nav>
         <Home></Home>
-        <List></List>
-        <DetailPage></DetailPage>
-        <EditModal></EditModal>
-
       </div>
     );
   }
