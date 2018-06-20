@@ -24,13 +24,13 @@ class DetailPage extends React.Component {
         </div>
         <div className='button-backdrop'>
           <div className='top-buttons'>
-            <div className='top-button1'></div>
-            <div className='top-button2'></div>
-            <div className='top-button3'></div>
+            <div className='top-button1'><p><span className='bright-green'>Grade</span></p></div>
+            <div className='top-button2'><p><span className='bright-green'>Complete</span></p></div>
+            <div className='top-button3'><p><span className='bright-green'>Notes</span></p></div>
           </div>
           <div className='bottom-buttons'>
-            <div className='bottom-button1'></div>
-            <div className='bottom-button2'></div>
+            <div className='bottom-button1'><p><span className='bright-green'>Add to List</span></p></div>
+            <div className='bottom-button2'><p><span className='bright-green'>Rate</span></p></div>
           </div>
 
         </div>

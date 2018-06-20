@@ -13,17 +13,18 @@
   flex-direction: column;
   align-items: center;
   color: white;
-  height: 240px;
+  height: 250px;
   width: 100%;
   background-image: url(./../imgs/detail-backdrop.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .detail {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 42px;
 }
 
 .route-image {
@@ -33,6 +34,7 @@
 }
 
 .button-backdrop {
+  color: #89DA2F;
   height: 300px;
   width: 100%;
   background-image: url(./../imgs/button-backdrop.svg);
@@ -46,6 +48,9 @@
 }
 
 .top-button1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -56,6 +61,9 @@
 }
 
 .top-button2 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -66,6 +74,9 @@
 }
 
 .top-button3 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   height: 90px;
   width: 90px;
     border-radius: 50%;
@@ -83,6 +94,9 @@
 }
 
 .bottom-button1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   margin: 0 5% 0 5%;
   height: 90px;
   width: 90px;
@@ -94,7 +108,10 @@
 }
 
 .bottom-button2 {
-    margin: 0 5% 0 5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: 0 5% 0 5%;
   height: 90px;
   width: 90px;
   border-radius: 50%;
@@ -102,4 +119,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(./../imgs/star.svg);
+}
+
+.bottom-button1 p, .bottom-button2 p, .top-button1 p, .top-button2 p, .top-button3 p {
+  position: relative;
+  top: 20%;
 }
