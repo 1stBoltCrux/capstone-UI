@@ -1,3 +1,7 @@
+.top-bar a {
+  width: 10%;
+}
+
 .top-bar h3 {
   color: #89DA2F;
   font-weight: lighter;

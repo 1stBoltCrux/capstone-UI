@@ -2,8 +2,8 @@ import  React from 'react';
 import ReactDom from 'react-dom';
 import './editmodal.css'
 import okButton from './../imgs/okbutton.svg';
-
-
+import { Link } from 'react-router-dom';
+import EditGrade from './EditGrade.js'
 class EditModal extends React.Component {
   render() {
     return (
@@ -11,14 +11,9 @@ class EditModal extends React.Component {
         <div className='modal-content'>
         <div className='top-bar'>
           <h3>Place Holder</h3>
-          <div className='close-button'></div>
+          <Link to="/detailpage"><div className='close-button'></div></Link>
         </div>
-        <div className='content-container'>
-          <div className='notes-container'>
-
-          </div>
-          <img src={okButton}/>
-        </div>
+        <EditGrade></EditGrade>
       </div>
         <div className='bottom-logo'></div>
 
@@ -28,3 +23,10 @@ class EditModal extends React.Component {
 }
 
 export default EditModal;
+
+{/* <div className='content-container'>
+<div className='notes-container'>
+
+</div>
+<img src={okButton}/>
+</div> */}

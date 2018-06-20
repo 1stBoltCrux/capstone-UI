@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="235px" viewBox="0 0 200 235" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>top-grade-dropdown</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="36.4887695" y="29">5.6</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-3" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="144.994629" y="28">a</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-5" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="145.5" y="78">c</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-7" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="144.744141" y="127">+</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-9" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="32.1469727" y="153">5.11</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-11" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="36.4887695" y="54">5.7</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-13" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="144.994629" y="55">b</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-14">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-15" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="144.994629" y="104">d</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-16">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-17" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="147.00293" y="153">-</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-18">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-19" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="31.4833984" y="178">5.12</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-20">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-21" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="36.4887695" y="79">5.8</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-22">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-23" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="31.4833984" y="204">5.13</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-24">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-25" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="36.4887695" y="104">5.9</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-26">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-27" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="31.4833984" y="228">5.14</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-28">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <text id="text-29" font-family="Helvetica" font-size="18" font-weight="normal" fill="#FFFFFF">
+            <tspan x="31.4833984" y="129">5.10</tspan>
+        </text>
+        <filter x="-7.1%" y="-22.7%" width="116.7%" height="163.6%" filterUnits="objectBoundingBox" id="filter-30">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="top-grade-dropdown">
+            <polygon id="Rectangle-7" fill="#89DA2F" points="0 7.11586305 148.896484 7.11586305 159.802734 0.87109375 169.857422 7.11586305 200 7.11586305 200 234.909656 0 234.909656"></polygon>
+            <polygon id="Rectangle-9-Copy-3" fill="#6BAC23" points="100 7.14603908 149.026902 7.14603908 159.800203 0.961438063 169.889869 7.14603908 200 7.14603908 200 235 100 235"></polygon>
+            <rect id="Rectangle-9" fill-opacity="0.142153533" fill="#000000" x="0" y="35" width="200" height="25"></rect>
+            <rect id="Rectangle-9-Copy" fill-opacity="0.142153533" fill="#000000" x="0" y="85" width="200" height="25"></rect>
+            <rect id="Rectangle-9-Copy-2" fill-opacity="0.142153533" fill="#000000" x="0" y="135" width="200" height="25"></rect>
+            <rect id="Rectangle-9-Copy-4" fill-opacity="0.142153533" fill="#000000" x="0" y="185" width="200" height="25"></rect>
+            <g id="5.6" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                <use xlink:href="#text-1"></use>
+            </g>
+            <g id="a" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-4)" xlink:href="#text-3"></use>
+                <use xlink:href="#text-3"></use>
+            </g>
+            <g id="c" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-6)" xlink:href="#text-5"></use>
+                <use xlink:href="#text-5"></use>
+            </g>
+            <g id="+" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-8)" xlink:href="#text-7"></use>
+                <use xlink:href="#text-7"></use>
+            </g>
+            <g id="5.11" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-10)" xlink:href="#text-9"></use>
+                <use xlink:href="#text-9"></use>
+            </g>
+            <g id="5.7" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-12)" xlink:href="#text-11"></use>
+                <use xlink:href="#text-11"></use>
+            </g>
+            <g id="b" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-14)" xlink:href="#text-13"></use>
+                <use xlink:href="#text-13"></use>
+            </g>
+            <g id="d" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-16)" xlink:href="#text-15"></use>
+                <use xlink:href="#text-15"></use>
+            </g>
+            <g id="-" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-18)" xlink:href="#text-17"></use>
+                <use xlink:href="#text-17"></use>
+            </g>
+            <g id="5.12" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-20)" xlink:href="#text-19"></use>
+                <use xlink:href="#text-19"></use>
+            </g>
+            <g id="5.8" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-22)" xlink:href="#text-21"></use>
+                <use xlink:href="#text-21"></use>
+            </g>
+            <g id="5.13" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-24)" xlink:href="#text-23"></use>
+                <use xlink:href="#text-23"></use>
+            </g>
+            <g id="5.9" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-26)" xlink:href="#text-25"></use>
+                <use xlink:href="#text-25"></use>
+            </g>
+            <g id="5.14" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-28)" xlink:href="#text-27"></use>
+                <use xlink:href="#text-27"></use>
+            </g>
+            <g id="5.10" fill="#FFFFFF" fill-opacity="1">
+                <use filter="url(#filter-30)" xlink:href="#text-29"></use>
+                <use xlink:href="#text-29"></use>
+            </g>
+        </g>
+    </g>
+</svg>
