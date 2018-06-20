@@ -1,0 +1,105 @@
+.detail-page-wrapper {
+  width: 350px;
+  margin: auto;
+}
+
+.detail-info-box h3 {
+  color: #89DA2F;
+  font-weight: lighter;
+}
+
+.detail-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  height: 240px;
+  width: 100%;
+  background-image: url(./../imgs/detail-backdrop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.route-image {
+  height: 350px;
+  width: 100%;
+  background-image: url(./../imgs/route-image.png);
+}
+
+.button-backdrop {
+  height: 300px;
+  width: 100%;
+  background-image: url(./../imgs/button-backdrop.svg);
+}
+
+.top-buttons {
+  position: relative;
+  top: 3.5vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.top-button1 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../imgs/shield.svg);
+}
+
+.top-button2 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../imgs/checkmark.svg);
+}
+
+.top-button3 {
+  height: 90px;
+  width: 90px;
+    border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../imgs/clipboard.svg);
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 28%
+}
+
+.bottom-button1 {
+  margin: 0 5% 0 5%;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../imgs/list.svg);
+}
+
+.bottom-button2 {
+    margin: 0 5% 0 5%;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../imgs/star.svg);
+}

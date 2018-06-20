@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="350px" height="300px" viewBox="0 0 350 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <g id="detail-bottom-backdrop">
+                <rect id="Rectangle-4-Copy" fill="#333333" x="0" y="0" width="350" height="80.4878049"></rect>
+                <rect id="Rectangle-3-Copy" fill="#333333" x="0" y="214.285714" width="350" height="85.7142857"></rect>
+                <rect id="Rectangle-9" fill="#424242" x="0" y="79.4425087" width="350" height="134.843206"></rect>
+            </g>
+            <path d="M0,79.4425087 L350,79.4425087" id="Path-3" stroke="#FFFFFF"></path>
+            <path d="M0,146.341463 L350,146.341463" id="Path-3-Copy-2" stroke="#FFFFFF"></path>
+            <path d="M0,214.285714 L350,214.285714" id="Path-3-Copy" stroke="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

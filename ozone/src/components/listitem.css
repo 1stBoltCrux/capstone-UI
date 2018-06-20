@@ -1,9 +1,9 @@
-h3 {
+.item-info h3 {
   color: #89DA2F;
   font-weight: lighter;
 }
 
-p {
+.item-info p {
   color: white;
 }
 .list-item-wrapper {
