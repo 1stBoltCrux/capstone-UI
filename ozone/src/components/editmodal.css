@@ -1,6 +1,12 @@
+.top-bar h3 {
+  color: #89DA2F;
+  font-weight: lighter;
+}
+
 .edit-modal-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   margin: auto;
   height: 1024px;
   width: 350px;
@@ -8,8 +14,36 @@
 }
 
 .bottom-logo {
-  align-self: flex-end;
+  align-self: center;
   height: 75px;
   width: 115px;
   background-image: url(./../imgs/zone-logo.svg);
 }
+
+.top-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.close-button {
+  height: 72px;
+  width: 72px;
+  background-image: url(./../imgs/close.svg);
+}
+
+.content-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notes-container {
+  height: 350px;
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 12px;
+  margin-bottom: 3vh;
+
+  }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="45px" viewBox="0 0 160 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>okbutton</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Helvetica" font-size="28.8" font-weight="normal" fill="#FFFFFF">
+            <tspan x="59.2" y="31.2">OK</tspan>
+        </text>
+        <filter x="-12.9%" y="-14.3%" width="130.2%" height="140.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="okbutton" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="" id="Path-24" stroke="#979797" stroke-width="1.6"></path>
+        <rect id="Rectangle-8" fill="#89DA2F" x="2" y="1" width="160" height="44.8" rx="22.4"></rect>
+        <g id="OK" fill="#FFFFFF" fill-opacity="1">
+            <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+            <use xlink:href="#text-1"></use>
+        </g>
+    </g>
+</svg>
