@@ -6,6 +6,7 @@ import List from './components/List.js';
 import  Nav from './components/Nav.js';
 import DetailPage from './components/DetailPage.js';
 import  EditModal from './components/EditModal.js';
+import {Switch, Route} from 'react-router-dom'
 
 class App extends Component {
   render() {
