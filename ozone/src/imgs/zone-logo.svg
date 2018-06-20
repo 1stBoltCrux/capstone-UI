@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="115px" height="75px" viewBox="0 0 115 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>zone-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="57.5 0 115 59 0 59"></polygon>
+        <filter x="-1.3%" y="-2.5%" width="104.3%" height="108.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="1" dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feMorphology radius="1" operator="erode" in="SourceAlpha" result="shadowInner"></feMorphology>
+            <feOffset dx="1" dy="1" in="shadowInner" result="shadowInner"></feOffset>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"></feComposite>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-3.1%" y="-5.4%" width="109.4%" height="116.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <text id="text-4" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="41" y="72">ZONE</tspan>
+        </text>
+        <filter x="-2.9%" y="-7.1%" width="111.8%" height="128.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="zone-logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Triangle-Copy" opacity="0.604799107">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use stroke="#F8F8F8" stroke-width="1" xlink:href="#path-1"></use>
+        </g>
+        <g id="BALLS-Copy" filter="url(#filter-3)" opacity="0.604799107" transform="translate(26.000000, 18.000000)">
+            <path d="M35.1592202,23.5797911 C34.1526285,23.8537668 33.0933916,24 32,24 C30.9066084,24 29.8473715,23.8537668 28.8407798,23.5797911 C28.9456084,22.9018677 29,22.2072858 29,21.5 C29,15.7725247 25.4332845,10.8781004 20.3998163,8.91669002 C21.7606949,3.78333235 26.4385252,0 32,0 C37.5614748,0 42.2393051,3.78333235 43.6001837,8.91669002 C38.5667155,10.8781004 35,15.7725247 35,21.5 C35,22.2072858 35.0543916,22.9018677 35.1592202,23.5797911 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="0.9"></path>
+            <circle id="Oval-2" stroke="#FFFFFF" cx="14.5" cy="22.5" r="14.5"></circle>
+            <circle id="Oval-2-Copy" stroke="#FBFBFB" cx="49.5" cy="22.5" r="14.5"></circle>
+        </g>
+        <g id="ZONE-Copy" fill="#FFFFFF" fill-opacity="1">
+            <use filter="url(#filter-5)" xlink:href="#text-4"></use>
+            <use xlink:href="#text-4"></use>
+        </g>
+    </g>
+</svg>

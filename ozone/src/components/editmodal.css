@@ -1,0 +1,15 @@
+.edit-modal-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 1024px;
+  width: 350px;
+  background-image: url(./../imgs/blurred-bg.png);
+}
+
+.bottom-logo {
+  align-self: flex-end;
+  height: 75px;
+  width: 115px;
+  background-image: url(./../imgs/zone-logo.svg);
+}
