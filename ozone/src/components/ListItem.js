@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import './listitem.css';
 import star from './../imgs/icon-star.svg'
+import {Link} from 'react-router-dom';
 
 class ListItem extends React.Component {
   render() {
     return (
-      <div className='list-item-wrapper'>
+      <Link to="/detailpage"><div className='list-item-wrapper'>
         <div className='item-type'></div>
         <div className='item-info-box'>
           <div className='item-info'>
@@ -19,7 +20,7 @@ class ListItem extends React.Component {
 
         </div>
 
-      </div>
+      </div></Link>
     );
   }
 }

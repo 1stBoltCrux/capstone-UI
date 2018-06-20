@@ -4,7 +4,7 @@ import './detailpage.css';
 import Nav from './Nav.js'
 import star from './../imgs/icon-star.svg'
 import moreInfo from './../imgs/icon-more-info.svg'
-
+import {Link} from 'react-router-dom';
 class DetailPage extends React.Component {
   render() {
     return (
@@ -24,13 +24,13 @@ class DetailPage extends React.Component {
         </div>
         <div className='button-backdrop'>
           <div className='top-buttons'>
-            <div className='top-button1'><p><span className='bright-green'>Grade</span></p></div>
-            <div className='top-button2'><p><span className='bright-green'>Complete</span></p></div>
-            <div className='top-button3'><p><span className='bright-green'>Notes</span></p></div>
+            <Link to="/editmodal"><div className='top-button1'><p><span className='bright-green'>Grade</span></p></div></Link>
+            <Link to="/editmodal"><div className='top-button2'><p><span className='bright-green'>Complete</span></p></div></Link>
+            <Link to="/editmodal"><div className='top-button3'><p><span className='bright-green'>Notes</span></p></div></Link>
           </div>
           <div className='bottom-buttons'>
-            <div className='bottom-button1'><p><span className='bright-green'>Add to List</span></p></div>
-            <div className='bottom-button2'><p><span className='bright-green'>Rate</span></p></div>
+            <Link to="/editmodal"><div className='bottom-button1'><p><span className='bright-green'>Add to List</span></p></div></Link>
+            <Link to="/editmodal"><div className='bottom-button2'><p><span className='bright-green'>Rate</span></p></div></Link>
           </div>
 
         </div>
