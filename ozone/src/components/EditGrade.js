@@ -15,7 +15,7 @@ class EditGrade extends React.Component {
       isMenuHidden: !prevState.isMenuHidden
     }));
   }
-  render (){
+  render()  {
     let menuVisibility = null;
     if (this.state.isMenuHidden === false) {
       menuVisibility = <Menu/>;
@@ -33,5 +33,4 @@ class EditGrade extends React.Component {
     );
   }
 }
-
 export default EditGrade;
