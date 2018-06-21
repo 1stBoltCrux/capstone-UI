@@ -4,6 +4,8 @@
 
 An rock climbing diary for the Ozone climbing crag in Washougal, Washington.
 
+Code is located in "ozone" directory.
+
 #### By _**Ted Leary**_
 
 ## Description
@@ -18,6 +20,8 @@ This app will populate a list of routes at Ozone using Mountainproject.com's API
 ## Setup/Installation Requirements
 
 * Install program by cloning this repository.
+* run $npm Install
+* $npm run start to launch dev server.
 
 ## Known Bugs
 
