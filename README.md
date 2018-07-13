@@ -8,6 +8,16 @@ Code is located in "ozone" directory.
 
 #### By _**Ted Leary**_
 
+#### Progress at - 7/13/18
+
+* CSS writeup refactored into css-modules syntax.
+* API call is made in index.js
+* two reducers receiving separate action types implemented to be combined and returned as state
+* JSON info from call populates List component
+* Detail component populated dynamically with information from list (props sent through router link)
+* Detail component 'more info' button links out to mountainproject's info page on selected route
+* Add to List button pushes route object to 'myList' state slice
+
 ## Description
 
 This app will populate a list of routes at Ozone using Mountainproject.com's API. Users will be able to search the main list to populate their own personal list with routes they are interested in. Users can then grade, rate, check-off-as-completed or add notes to specific routes.

@@ -32,7 +32,7 @@ class DetailPage extends React.Component {
             <div className={styles.detail}><p>{location}</p></div>
             <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
             <div className={styles.detail}><img src={star}/></div>
-            <div className={styles.detail}><img src={moreInfo}/></div>
+            <div className={styles.detail}><a href={route.url}><img src={moreInfo}/></a></div>
         </div>
         <div className={styles.routeImage}>
         </div>
