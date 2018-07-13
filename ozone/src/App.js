@@ -6,7 +6,8 @@ import List from './components/List.js';
 import  Nav from './components/Nav.js';
 import DetailPage from './components/DetailPage.js';
 import  EditModal from './components/EditModal.js';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class App extends Component {
   render() {
@@ -20,12 +21,17 @@ class App extends Component {
               <Route path="/list" exact component={List}/>
               <Route path ="/detailpage" exact component={DetailPage}/>
               <Route path ="/editmodal" exact component={EditModal}/>
-            </Switch>      
+            </Switch>
           </div>
       </BrowserRouter>
       </div>
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    fullList: state
+  }
+}
 
-export default App;
+export default withRouter(connect(mapStateToProps)(App));
