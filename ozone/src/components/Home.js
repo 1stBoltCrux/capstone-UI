@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class Home extends React.Component {
   render () {
     return (
-      <div className={styles.homeWrapper}>
+      <div  className={styles.homeWrapper}>
         <div className={styles.filters}>
           <div className={styles.filterRoute}>
             <div className={styles.filterBox} id="filter-title"><p>Filter Routes</p></div>
