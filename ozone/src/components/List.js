@@ -12,7 +12,10 @@ class List extends React.Component {
         {this.props.routes.map((route) =>
 
           <ListItem
-          name={route.name}/>
+          name={route.name}
+          rating={route.rating}
+          location={route.location[route.location.length-1]}
+          />
         )}
 
       </div>

@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 import styles from './listitem.css';
 import star from './../imgs/icon-star.svg'
 import {Link} from 'react-router-dom';
+/* global location */
+/* eslint no-restricted-globals: ["off", "location"] */
 
 class ListItem extends React.Component {
   render() {
@@ -12,8 +14,8 @@ class ListItem extends React.Component {
         <div className={styles.itemInfoBox}>
           <div className={styles.itemInfo}>
             <h3>{this.props.name}</h3>
-            <p> 5.12s </p>
-            <p>Mordor Wall</p>
+            <p> {this.props.rating} </p>
+            <p>{this.props.location}</p>
             <img src={star}/>
           </div>
           <div className={styles.expandButton}></div>
