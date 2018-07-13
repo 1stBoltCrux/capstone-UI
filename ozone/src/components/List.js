@@ -7,12 +7,13 @@ import { v4 } from 'uuid';
 
 class List extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className={styles.listWrapper}>
         {this.props.routes.map((route, key) =>
-
           <ListItem
+
+            route={route}
+          pitches={route.pitches}
           routeId={route.id}
           name={route.name}
           rating={route.rating}

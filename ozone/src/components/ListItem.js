@@ -12,7 +12,14 @@ class ListItem extends React.Component {
       <Link to={{
         pathname: '/detailpage',
         state: {
-          name: this.props.name
+          route: this.props.route,
+          name: this.props.name,
+          rating: this.props.rating,
+          location: this.props.location,
+          pitches: this.props.pitches,
+          routeId: this.props.routeId
+
+
         }
       }}><div className={styles.listItemWrapper}>
         <div className={styles.itemType}></div>

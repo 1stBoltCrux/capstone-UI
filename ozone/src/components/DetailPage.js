@@ -5,17 +5,32 @@ import Nav from './Nav.js'
 import star from './../imgs/icon-star.svg'
 import moreInfo from './../imgs/icon-more-info.svg'
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class DetailPage extends React.Component {
+
+
+      addToList(props, route){
+        const action = {
+          type: 'ADD_TO_LIST',
+          route: route
+        }
+        props.dispatch(action)
+      }
+
+
   render() {
-    console.log(this.props.location.state);
+    const {route, routeId, pitches, name, rating, location } = this.props.location.state;
+
+    console.log(route);
+
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
-            <div className={styles.detail}><h3>The Crumbling</h3></div>
-            <div className={styles.detail}><p>5.12a</p></div>
-            <div className={styles.detail}><p>Mordor Wall</p></div>
-            <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: 1</span></p></div>
+            <div className={styles.detail}><h3>{name}</h3></div>
+            <div className={styles.detail}><p>{rating}</p></div>
+            <div className={styles.detail}><p>{location}</p></div>
+            <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
             <div className={styles.detail}><img src={star}/></div>
             <div className={styles.detail}><img src={moreInfo}/></div>
         </div>
@@ -28,7 +43,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <Link to="/editmodal"><div className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div></Link>
+            <div onClick={()=>this.addToList(this.props, route)} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 
@@ -39,4 +54,4 @@ class DetailPage extends React.Component {
   }
 }
 
-export default DetailPage;
+export default connect()(DetailPage);

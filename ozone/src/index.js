@@ -14,10 +14,10 @@ const middleware = applyMiddleware(thunk)
 const store = createStore(rootReducer, middleware);
 
 let unsubscribe = store.subscribe(() =>
-store.getState()
+console.log(store.getState())
 );
 
-console.log(store.getState());
+
 
 store.dispatch((dispatch) => {
   dispatch({type: 'FETCHING'})
