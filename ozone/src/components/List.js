@@ -13,6 +13,7 @@ class List extends React.Component {
         {this.props.routes.map((route, key) =>
 
           <ListItem
+          routeId={route.id}
           name={route.name}
           rating={route.rating}
           location={route.location[route.location.length-1]}

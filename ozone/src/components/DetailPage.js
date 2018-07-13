@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom';
 
 class DetailPage extends React.Component {
   render() {
+    console.log(this.props.location.state);
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>

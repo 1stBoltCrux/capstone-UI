@@ -9,13 +9,18 @@ import {Link} from 'react-router-dom';
 class ListItem extends React.Component {
   render() {
     return (
-      <Link to="/detailpage"><div className={styles.listItemWrapper}>
+      <Link to={{
+        pathname: '/detailpage',
+        state: {
+          name: this.props.name
+        }
+      }}><div className={styles.listItemWrapper}>
         <div className={styles.itemType}></div>
         <div className={styles.itemInfoBox}>
           <div className={styles.itemInfo}>
             <h3>{this.props.name}</h3>
             <p> {this.props.rating} </p>
-            <p>{this.props.location}</p>
+            <p>{this.props.routeId}</p>
             <img src={star}/>
           </div>
           <div className={styles.expandButton}></div>
