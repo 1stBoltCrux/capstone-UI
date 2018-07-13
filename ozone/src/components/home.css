@@ -1,5 +1,5 @@
 
-.home-wrapper {
+.homeWrapper {
   padding-top: 4vh;
   margin: auto;
   width: 350px;
@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.filter-route {
+.filterRoute {
   height: 166px;
   background-image: url(./../imgs/filtermenu.png);
   background-position: center;
@@ -26,7 +26,7 @@
   color: #89DA2F;
 }
 
-.filter-box {
+.filterBox {
   padding: 0 15px 0 15px;
   height: 40px;
   display: flex;
@@ -35,11 +35,11 @@
   color: white;
 }
 
-.filter-box .title {
+.filterBox .title {
   color: #89DA2F;
 }
 
-.filter-route-button {
+.filterRouteButton {
   padding: 2px;
   display: flex;
   justify-content: center;
