@@ -20,8 +20,6 @@ class DetailPage extends React.Component {
             <div className={styles.detail}><img src={moreInfo}/></div>
         </div>
         <div className={styles.routeImage}>
-
-
         </div>
         <div className={styles.buttonBackdrop}>
           <div className={styles.topButtons}>

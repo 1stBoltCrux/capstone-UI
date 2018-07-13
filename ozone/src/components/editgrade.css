@@ -1,4 +1,4 @@
-.edit-grade-wrapper {
+.editGradeWrapper {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,7 +19,7 @@
   margin-bottom: 4vh;
 }
 
-.grade-dropdown {
+.gradeDropdown {
   height: 58px;
   width: 200px;
   background-image: url(./../imgs/top-grade.svg);

@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import './list.css';
+import styles from './list.css';
 import Nav from './Nav.js';
 import ListItem from './ListItem.js';
 
 class List extends React.Component {
   render() {
     return (
-      <div className='list-wrapper'>
+      <div className={styles.listWrapper}>
         <Nav></Nav>
         <ListItem></ListItem>
       </div>

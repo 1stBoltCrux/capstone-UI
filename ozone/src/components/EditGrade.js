@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import './editgrade.css';
+import styles from './editgrade.css';
 import Menu from './Menu.js'
 
 class EditGrade extends React.Component {
@@ -23,10 +23,10 @@ class EditGrade extends React.Component {
       menuVisibility = null;
     }
     return(
-      <div className='edit-grade-wrapper'>
+      <div className={styles.editGradeWrapper}>
 
-        <div className='shield'><p><span className='your-grade'>5.11+</span></p></div>
-        <div className='grade-dropdown' onClick={this.handleClick}></div>
+        <div className={styles.shield}><p><span className={styles.yourGrade}>5.11+</span></p></div>
+        <div className={styles.gradeDropdown} onClick={this.handleClick}></div>
         {menuVisibility}
       </div>
 

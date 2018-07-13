@@ -1,22 +1,22 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import './listitem.css';
+import styles from './listitem.css';
 import star from './../imgs/icon-star.svg'
 import {Link} from 'react-router-dom';
 
 class ListItem extends React.Component {
   render() {
     return (
-      <Link to="/detailpage"><div className='list-item-wrapper'>
-        <div className='item-type'></div>
-        <div className='item-info-box'>
-          <div className='item-info'>
+      <Link to="/detailpage"><div className={styles.listItemWrapper}>
+        <div className={styles.itemType}></div>
+        <div className={styles.itemInfoBox}>
+          <div className={styles.itemInfo}>
             <h3>The Crumbling</h3>
             <p> 5.12s </p>
             <p>Mordor Wall</p>
             <img src={star}/>
           </div>
-          <div className='expand-button'></div>
+          <div className={styles.expandButton}></div>
 
         </div>
 

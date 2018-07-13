@@ -1,21 +1,21 @@
 import  React from 'react';
 import ReactDom from 'react-dom';
-import './editmodal.css'
+import styles from './editmodal.css'
 import okButton from './../imgs/okbutton.svg';
 import { Link } from 'react-router-dom';
 import EditGrade from './EditGrade.js'
 class EditModal extends React.Component {
   render() {
     return (
-      <div className='edit-modal-wrapper'>
-        <div className='modal-content'>
-        <div className='top-bar'>
+      <div className={styles.editModalWrapper}>
+        <div className={styles.modalContent}>
+        <div className={styles.topBar}>
           <h3>Place Holder</h3>
-          <Link to="/detailpage"><div className='close-button'></div></Link>
+          <Link to="/detailpage"><div className={styles.closeButton}></div></Link>
         </div>
         <EditGrade></EditGrade>
       </div>
-        <div className='bottom-logo'></div>
+        <div className={styles.bottomLogo}></div>
 
       </div>
     );

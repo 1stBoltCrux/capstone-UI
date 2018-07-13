@@ -1,13 +1,13 @@
-.top-bar a {
+.topBar a {
   width: 10%;
 }
 
-.top-bar h3 {
+.topBar h3 {
   color: #89DA2F;
   font-weight: lighter;
 }
 
-.edit-modal-wrapper {
+.editModalWrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,34 +17,34 @@
   background-image: url(./../imgs/blurred-bg.png);
 }
 
-.bottom-logo {
+.bottomLogo {
   align-self: center;
   height: 75px;
   width: 115px;
   background-image: url(./../imgs/zone-logo.svg);
 }
 
-.top-bar {
+.topBar {
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3vh;
 }
 
-.close-button {
+.closeButton{
   height: 72px;
   width: 72px;
   background-image: url(./../imgs/close.svg);
 }
 
-.content-container {
+.contentContainer {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.notes-container {
+.notesContainer {
   height: 350px;
   width: 90%;
   border: 2px solid white;
