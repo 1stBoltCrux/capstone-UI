@@ -15,6 +15,12 @@ import  EditModal from './components/EditModal.js';
 
 const store = createStore(rootReducer);
 
+let unsubscribe = store.subscribe(() =>
+store.getState()
+);
+
+console.log(store.getState());
+
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
