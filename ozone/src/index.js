@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -10,7 +13,10 @@ import  Nav from './components/Nav.js';
 import DetailPage from './components/DetailPage.js';
 import  EditModal from './components/EditModal.js';
 
+const store = createStore(rootReducer);
+
 ReactDOM.render(
+  <Provider store={store}>
   <BrowserRouter>
   <div>
   <Switch>
@@ -20,7 +26,9 @@ ReactDOM.render(
     <Route path ="/editmodal" exact component={EditModal}/>
   </Switch>
 </div>
-</BrowserRouter>, document.getElementById('root'));
+</BrowserRouter>
+</Provider>
+, document.getElementById('root'));
 
 
 registerServiceWorker();
