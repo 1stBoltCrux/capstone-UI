@@ -7,7 +7,7 @@ a {
  margin: 0;
 }
 
-.nav-wrapper {
+.navWrapper {
   margin: auto;
   width: 350px;
 }
@@ -22,7 +22,7 @@ a {
 
 }
 
-.nav-button {
+.navButton {
   font-size: .9rem;
   display: flex;
   justify-content: center;

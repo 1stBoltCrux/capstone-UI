@@ -1,19 +1,19 @@
-.bottom-buttons a {
+.bottomButtons a {
   width: 90px;
   margin: 0 4% 0 4%;
 }
 
-.detail-page-wrapper {
+.detailPageWrapper {
   width: 350px;
   margin: auto;
 }
 
-.detail-info-box h3 {
+.detailInfoBox h3 {
   color: #89DA2F;
   font-weight: lighter;
 }
 
-.detail-info-box {
+.detailInfoBox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,27 +32,27 @@
   height: 42px;
 }
 
-.route-image {
+.routeImage {
   height: 350px;
   width: 100%;
   background-image: url(./../imgs/route-image.png);
 }
 
-.button-backdrop {
+.buttonBackdrop {
   color: #89DA2F;
   height: 300px;
   width: 100%;
   background-image: url(./../imgs/button-backdrop.svg);
 }
 
-.top-buttons {
+.topButtons {
   position: relative;
   top: 3.5vh;
   display: flex;
   justify-content: space-around;
 }
 
-.top-button1 {
+.topButton1 {
   margin:auto;
   display: flex;
   align-items: flex-end;
@@ -66,7 +66,7 @@
   background-image: url(./../imgs/shield.svg);
 }
 
-.top-button2 {
+.topButton2 {
   margin:auto;
   display: flex;
   align-items: flex-end;
@@ -80,7 +80,7 @@
   background-image: url(./../imgs/checkmark.svg);
 }
 
-.top-button3 {
+.topButton3 {
   margin:auto;
   display: flex;
   align-items: flex-end;
@@ -94,14 +94,14 @@
   background-image: url(./../imgs/clipboard.svg);
 }
 
-.bottom-buttons {
+.bottomButtons {
   display: flex;
   justify-content: center;
   position: relative;
   top: 28%
 }
 
-.bottom-button1 {
+.bottomButton1 {
   margin:0;
   display: flex;
   align-items: flex-end;
@@ -116,7 +116,7 @@
   background-image: url(./../imgs/list.svg);
 }
 
-.bottom-button2 {
+.bottomButton2 {
 
   display: flex;
   align-items: flex-end;
@@ -130,7 +130,7 @@
   background-image: url(./../imgs/star.svg);
 }
 
-.bottom-button1 p, .bottom-button2 p, .top-button1 p, .top-button2 p, .top-button3 p {
+.bottomButton1 p, .bottomButton2 p, .topButton1 p, .topButton2 p, .topButton3 p {
   position: relative;
   top: 20%;
 }
