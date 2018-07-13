@@ -11,7 +11,7 @@ class ListItem extends React.Component {
         <div className={styles.itemType}></div>
         <div className={styles.itemInfoBox}>
           <div className={styles.itemInfo}>
-            <h3>The Crumbling</h3>
+            <h3>{this.props.name}</h3>
             <p> 5.12s </p>
             <p>Mordor Wall</p>
             <img src={star}/>

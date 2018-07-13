@@ -1,7 +1,9 @@
-const FullListReducer = (state = [], action) => {
+const FullListReducer = (state = {}, action) => {
   switch(action.type) {
     case 'RECIEVED': {
-      console.log(action.payload);
+      const fullList = Object.assign({}, action.payload);
+      console.log(fullList);
+      return fullList;
     }
   }
   return state;

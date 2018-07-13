@@ -10,7 +10,10 @@ import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 
 class App extends Component {
+
   render() {
+    const routes = this.props.fullList.routes
+      console.log(routes);
     return (
       <div className='main-wrapper'>
         <BrowserRouter>
@@ -18,7 +21,7 @@ class App extends Component {
             <Nav/>
             <Switch>
               <Route path="/" exact component={Home}/>
-              <Route path="/list" exact component={List}/>
+              <Route path="/list" render={()=><List routes={routes}/>}/>
               <Route path ="/detailpage" exact component={DetailPage}/>
               <Route path ="/editmodal" exact component={EditModal}/>
             </Switch>
@@ -30,7 +33,8 @@ class App extends Component {
 }
 const mapStateToProps = state => {
   return {
-    fullList: state
+    fullList: state.fullList,
+    myList: state.myList
   }
 }
 

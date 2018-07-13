@@ -6,9 +6,15 @@ import ListItem from './ListItem.js';
 
 class List extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <div className={styles.listWrapper}>
-        <ListItem></ListItem>
+        {this.props.routes.map((route) =>
+
+          <ListItem
+          name={route.name}/>
+        )}
+
       </div>
     );
   }
