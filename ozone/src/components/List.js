@@ -8,7 +8,6 @@ class List extends React.Component {
   render() {
     return (
       <div className={styles.listWrapper}>
-        <Nav></Nav>
         <ListItem></ListItem>
       </div>
     );

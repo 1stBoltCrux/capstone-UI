@@ -1,7 +1,7 @@
 import  React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './home.css'
-
+import styles from './home.css';
+import { connect } from 'react-redux';
 
 class Home extends React.Component {
   render () {
@@ -32,4 +32,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default connect()(Home);

@@ -10,7 +10,6 @@ class DetailPage extends React.Component {
   render() {
     return (
       <div className={styles.detailPageWrapper}>
-        <Nav></Nav>
         <div className={styles.detailInfoBox}>
             <div className={styles.detail}><h3>The Crumbling</h3></div>
             <div className={styles.detail}><p>5.12a</p></div>
