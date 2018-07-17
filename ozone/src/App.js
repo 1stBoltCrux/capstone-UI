@@ -13,13 +13,11 @@ import makeCall from './actions'
 
 class App extends Component {
   componentDidMount(){
-    console.log(this.props);
     this.props.makeCall()
   }
   render() {
 
     const routes = this.props.fullList.routes
-      console.log(routes);
     return (
       <div className='main-wrapper'>
         <BrowserRouter>

@@ -9,7 +9,7 @@ import registerServiceWorker from './registerServiceWorker';
 import Nav from './components/Nav'
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import thunk from 'redux-thunk';
-import { makeCall } from './actions'
+// import { makeCall } from './actions'
 
 
 

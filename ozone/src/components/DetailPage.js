@@ -21,9 +21,6 @@ class DetailPage extends React.Component {
 
   render() {
     const {route, routeId, pitches, name, rating, location } = this.props.location.state;
-
-    console.log(route);
-
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>

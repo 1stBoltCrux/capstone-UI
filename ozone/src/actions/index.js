@@ -1,5 +1,5 @@
 import constants from './../constants';
-const {types} = constants
+const { types } = constants
 
 export default function makeCall() {
   let data;
@@ -8,7 +8,6 @@ export default function makeCall() {
       response => response.json()
     ).then(function(json){
       data = json
-      console.log(data);
       dispatch(makeCallAsync(data));
     })
   }
