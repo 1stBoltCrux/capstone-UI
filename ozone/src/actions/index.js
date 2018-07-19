@@ -25,15 +25,20 @@ export function addToList(props, route){
     type: types.ADD_TO_LIST,
     payload: route
   }
-  // const action = {
-  //   type: 'ADD_TO_LIST',
-  //   route: route
-  }
-  // props.dispatch(action)
+}
 
 
- export function handleSubmitClick(_name, _type, _grade) {
-   console.log(_name, _type, _grade);
+
+ export function handleSubmitClick(_name, _type, _grade, routes) {
+   return {
+     type: types.FILTER,
+     payload: {
+       name: _name,
+       type: _type,
+       grade: _grade,
+       routes: routes
+     }
+   }
 
 
 

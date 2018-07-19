@@ -11,7 +11,7 @@ import { addToList } from './../actions'
 class DetailPage extends React.Component {
 
   render() {
-    const {route, routeId, pitches, name, rating, location } = this.props.location.state;
+    const {route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
