@@ -4,20 +4,11 @@ import styles from './detailpage.css';
 import Nav from './Nav.js'
 import star from './../imgs/icon-star.svg'
 import moreInfo from './../imgs/icon-more-info.svg'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addToList } from './../actions'
 
 class DetailPage extends React.Component {
-
-
-      addToList(props, route){
-        const action = {
-          type: 'ADD_TO_LIST',
-          route: route
-        }
-        props.dispatch(action)
-      }
-
 
   render() {
     const {route, routeId, pitches, name, rating, location } = this.props.location.state;
@@ -40,7 +31,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=>this.addToList(this.props, route)} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+            <div onClick={()=> addToList(this.props, route)} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 

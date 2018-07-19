@@ -19,3 +19,11 @@ function makeCallAsync(data){
     payload: data
   }
 }
+
+export function addToList(props, route){
+  const action = {
+    type: 'ADD_TO_LIST',
+    route: route
+  }
+  props.dispatch(action)
+}
