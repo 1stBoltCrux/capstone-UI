@@ -28,6 +28,36 @@
   margin-left: 1vh;
 }
 
+.trad {
+  height: 85%;
+  width: 30%;
+  background-image: url(./../imgs/shield.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1vh;
+}
+
+.sport {
+  height: 85%;
+  width: 30%;
+  background-image: url(./../imgs/clipboard.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1vh;
+}
+
+.mixed {
+  height: 85%;
+  width: 30%;
+  background-image: url(./../imgs/icon-mixed.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 1vh;
+}
+
 .itemInfoBox {
   display: flex;
   align-items: center;

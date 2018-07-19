@@ -11,7 +11,7 @@ class List extends React.Component {
       <div className={styles.listWrapper}>
         {this.props.routes.map((route, key) =>
           <ListItem
-
+            type={route.type}
             route={route}
           pitches={route.pitches}
           routeId={route.id}

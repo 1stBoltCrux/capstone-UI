@@ -7,7 +7,16 @@ import {Link} from 'react-router-dom';
 /* eslint no-restricted-globals: ["off", "location"] */
 
 class ListItem extends React.Component {
+
   render() {
+    console.log(this.props.type);
+    if (this.props.type === 'Trad' || this.props.type === 'Trad, TR') {
+      styles.itemType = styles.trad
+    } else if (this.props.type === 'Sport'){
+      styles.itemType = styles.sport
+    } else {
+      styles.itemType = styles.mixed
+    }
     return (
       <Link to={{
         pathname: '/detailpage',
@@ -18,9 +27,8 @@ class ListItem extends React.Component {
           location: this.props.location,
           pitches: this.props.pitches,
           routeId: this.props.routeId
-
-
         }
+
       }}><div className={styles.listItemWrapper}>
         <div className={styles.itemType}></div>
         <div className={styles.itemInfoBox}>
