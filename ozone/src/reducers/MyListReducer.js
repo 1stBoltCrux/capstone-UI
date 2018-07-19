@@ -4,19 +4,23 @@
 const MyListReducer = (state = [], action) => {
   switch(action.type) {
     case 'ADD_TO_LIST': {
-    const newState = state.slice();
-    if (newState.length <= 0) {
-      newState.push(action.route)
-    }
-    newState.forEach((elem) => {
-      console.log(action.route.id);
-      if (elem.id !== action.route.id)
-      newState.push(action.route)
-    })
-    return newState
+      console.log(state);
+      let checkId = [];
+      let newState = state.slice();
+      newState.forEach((elem) => {
+        checkId.push(elem.id)
+      });
+      if (newState.length <= 0) {
+        newState.push(action.route)
+      } else if (checkId.includes(action.route.id)){
+        return newState;
+      } else {
+        newState.push(action.route)
+      }
+      return newState;
     }
     default:
-    return  state
+    return state
   }
 }
 

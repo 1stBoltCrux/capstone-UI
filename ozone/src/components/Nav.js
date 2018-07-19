@@ -8,7 +8,7 @@ class List extends React.Component {
     return (
       <div className={styles.navWrapper}>
         <div className={styles.nav}>
-          <Link to ="/list"><div className={styles.navButton}>My List</div></Link>
+          <Link to ="/myList"><div className={styles.navButton}>My List</div></Link>
           <Link to ="/"><div className={styles.navButton}>Home</div></Link>
           <Link to ="/list"><div className={styles.navButton}>Route List</div></Link>
         </div>

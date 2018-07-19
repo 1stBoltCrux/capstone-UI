@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import  Home from './components/Home.js';
 import List from './components/List.js';
+import MyList from './components/MyList.js'
 import  Nav from './components/Nav.js';
 import DetailPage from './components/DetailPage.js';
 import  EditModal from './components/EditModal.js';
@@ -18,14 +19,16 @@ class App extends Component {
   render() {
 
     const routes = this.props.fullList.routes
+    const myRoutes = this.props.myList
     return (
       <div className='main-wrapper'>
         <BrowserRouter>
           <div>
             <Nav/>
             <Switch>
+              <Route path="/myList" exact component={()=> <MyList myRoutes={myRoutes}/> }/>
               <Route path="/" exact component={Home}/>
-              <Route path="/list" render={()=><List routes={routes}/>}/>
+              <Route path="/list" render={()=> <List routes={routes}/>}/>
               <Route path ="/detailpage" exact component={DetailPage}/>
               <Route path ="/editmodal" exact component={EditModal}/>
             </Switch>
