@@ -9,7 +9,6 @@ import {Link} from 'react-router-dom';
 class ListItem extends React.Component {
 
   render() {
-    console.log(this.props.type);
     if (this.props.type === 'Trad' || this.props.type === 'Trad, TR') {
       styles.itemType = styles.trad
     } else if (this.props.type === 'Sport'){

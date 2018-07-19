@@ -31,7 +31,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=> addToList(this.props, route)} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+            <div onClick={()=> this.props.dispatch(addToList(this.props, route))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 

@@ -13,7 +13,6 @@ const FullListReducer = (state = {}, action) => {
         return 0;
       }
       fullList.routes.sort(compare);
-      console.log(fullList);
       return fullList;
     }
   }

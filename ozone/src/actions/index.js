@@ -21,9 +21,20 @@ function makeCallAsync(data){
 }
 
 export function addToList(props, route){
-  const action = {
-    type: 'ADD_TO_LIST',
-    route: route
+  return {
+    type: types.ADD_TO_LIST,
+    payload: route
   }
-  props.dispatch(action)
+  // const action = {
+  //   type: 'ADD_TO_LIST',
+  //   route: route
+  }
+  // props.dispatch(action)
+
+
+ export function handleSubmitClick(_name, _type, _grade) {
+   console.log(_name, _type, _grade);
+
+
+
 }

@@ -1,22 +1,30 @@
-
-
+import constants from './../constants';
+const {types} = constants;
 
 const MyListReducer = (state = [], action) => {
   switch(action.type) {
-    case 'ADD_TO_LIST': {
-      console.log(state);
+    case types.ADD_TO_LIST: {
+      console.log(action);
       let checkId = [];
       let newState = state.slice();
       newState.forEach((elem) => {
         checkId.push(elem.id)
       });
       if (newState.length <= 0) {
-        newState.push(action.route)
-      } else if (checkId.includes(action.route.id)){
+        newState.push(action.payload)
+      } else if (checkId.includes(action.payload.id)){
         return newState;
       } else {
-        newState.push(action.route)
+        newState.push(action.payload)
       }
+      function compare(a,b){
+        if (a.name < b.name)
+        return -1;
+        if (a.name > b.name)
+        return 1;
+        return 0;
+      }
+      newState.sort(compare);
       return newState;
     }
     default:
