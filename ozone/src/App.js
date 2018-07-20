@@ -16,8 +16,8 @@ class App extends Component {
   componentDidMount(){
     this.props.makeCall()
   }
-  render() {
 
+  render() {
     const routes = this.props.fullList.routes
     const myRoutes = this.props.myList
     const filteredList = this.props.filteredList
@@ -25,7 +25,7 @@ class App extends Component {
       <div className='main-wrapper'>
         <BrowserRouter>
           <div>
-            <Nav/>
+            <Nav />
             <Switch>
               <Route path="/myList" exact component={()=> <MyList myRoutes={myRoutes}/> }/>
               <Route path="/" exact component={()=><Home routes={routes} />}/>

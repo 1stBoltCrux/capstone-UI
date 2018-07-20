@@ -25,6 +25,11 @@ const FilteredListReducer = (state = {}, action) => {
       })
         return resultArray;
     }
+    case types.EMPTY_ARRAY: {
+      console.log('working');
+      const emptiedArray = [];
+      return emptiedArray;
+    }
   }
   return state;
 }

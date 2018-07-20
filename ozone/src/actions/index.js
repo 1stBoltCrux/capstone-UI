@@ -39,7 +39,8 @@ export function addToList(props, route){
        routes: routes
      }
    }
+}
 
-
-
+export function emptyArray() {
+  type: types.EMPTY_ARRAY
 }
