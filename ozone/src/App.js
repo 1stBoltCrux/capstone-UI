@@ -11,23 +11,22 @@ import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import makeCall from './actions'
-import {addListToFirebase} from './actions'
-
-
+import {addListToFirebase, watchFireBaseFullListRef} from './actions'
 
 class App extends Component {
   componentDidMount(){
+    console.log(this.props);
+    this.props.watchFireBaseFullListRef()
     this.props.makeCall()
 
   }
 
   render() {
-
     const routes = this.props.fullList.routes
     const myRoutes = this.props.myList
     const filteredList = this.props.filteredList
     return (
-      <div onClick={()=> addListToFirebase(this.props.fullList.routes)} className='main-wrapper'>
+      <div className='main-wrapper'>
         <BrowserRouter>
           <div>
             <Nav />
@@ -54,7 +53,8 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    makeCall: makeCall}, dispatch);
+    makeCall: makeCall,
+    watchFireBaseFullListRef: watchFireBaseFullListRef}, dispatch);
 }
 
  // const doesThisWork = fetch('https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=40.03&lon=-105.25&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=200285890-fbff6471f00c42d4b58bbfed57cd6a12').then(

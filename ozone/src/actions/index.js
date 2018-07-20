@@ -5,11 +5,18 @@ const { c, firebaseConfig } = constants;
 firebase.initializeApp(firebaseConfig);
 const fullListRef = firebase.database().ref('fullList');
 
+export function watchFireBaseFullListRef() {
+  return function(dispatch) {
+    fullListRef.on('value', data => {
+      console.log(data.val());
+    })
+  }
+}
+
 
 
 export function addListToFirebase(item){
   console.log(item);
-  fullListRef.push(item)
 }
 
 
