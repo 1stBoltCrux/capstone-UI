@@ -42,5 +42,8 @@ export function addToList(props, route){
 }
 
 export function emptyArray() {
-  type: types.EMPTY_ARRAY
+  console.log('working');
+  return {
+    type: types.EMPTY_ARRAY
+  }
 }
