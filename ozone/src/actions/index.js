@@ -8,17 +8,17 @@ const fullListRef = firebase.database().ref('fullList');
 export function watchFireBaseFullListRef() {
   return function(dispatch) {
     fullListRef.on('value', data => {
-      console.log(data.val());
+      return {
+        type: c.RECEIVED,
+        fullList: data.val()
+      }
     })
   }
 }
 
-
-
 export function addListToFirebase(item){
   console.log(item);
 }
-
 
 export default function makeCall() {
   let data;
