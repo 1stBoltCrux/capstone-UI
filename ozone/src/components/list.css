@@ -1,4 +1,6 @@
 .listWrapper {
   width: 350px;
   margin: auto;
+  min-height: 100vh;
+  background-image: url(./../imgs/swordfern.png);
 }

@@ -1,0 +1,18 @@
+.emptyListWrapper {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('./../imgs/swordfern.png');
+  background-repeat: no-repeat;
+  color: white;
+  box-sizing: border-box;
+  padding: 40px;
+}
+.emptyListMessage {
+  width: 200px;
+  text-align: center;
+  position: relative;
+  top: -100px;
+}

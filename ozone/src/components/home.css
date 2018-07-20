@@ -1,5 +1,6 @@
 
 .homeWrapper {
+  min-height: 100vh;
   padding-top: 4vh;
   margin: auto;
   width: 350px;

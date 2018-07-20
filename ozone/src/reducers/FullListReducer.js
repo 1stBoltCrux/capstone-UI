@@ -20,9 +20,9 @@ const FullListReducer = (state = {}, action) => {
       })
 
       function compare(a,b){
-        if (a.name < b.name)
+        if (a.starVotes < b.starVotes)
         return -1;
-        if (a.name > b.name)
+        if (a.starVotes > b.starVotes)
         return 1;
         return 0;
       }

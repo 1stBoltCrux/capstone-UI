@@ -4,9 +4,15 @@ import styles from './list.css';
 import Nav from './Nav.js';
 import ListItem from './ListItem.js';
 import { v4 } from 'uuid';
+import EmptyList from './EmptyList.js'
 
 class MyList extends React.Component {
   render() {
+    console.log(this.props.myRoutes);
+    let emptyList = null;
+    if (this.props.myRoutes.length <= 0) {
+      emptyList = <EmptyList/>
+    }
     return (
       <div className={styles.listWrapper}>
         {this.props.myRoutes.map((route, key) =>
@@ -17,10 +23,11 @@ class MyList extends React.Component {
           routeId={route.id}
           name={route.name}
           rating={route.rating}
-          location={route.location[route.location.length-1]}
+          location={route.location[2]}
           key={v4()}
           />
         )}
+        {emptyList}
 
       </div>
     );
