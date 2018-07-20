@@ -5,10 +5,11 @@
   justify-content: center;
   height: 100vh;
   background-image: url('./../imgs/swordfern.png');
+  width: 100%;
   background-repeat: no-repeat;
   color: white;
-  box-sizing: border-box;
-  padding: 40px;
+
+
 }
 .emptyListMessage {
   width: 200px;

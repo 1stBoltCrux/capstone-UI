@@ -1,9 +1,9 @@
 import constants from './../constants';
-const {types} = constants
+const { c } = constants
 
 const FilteredListReducer = (state = {}, action) => {
   switch(action.type) {
-    case types.FILTER: {
+    case c.FILTER: {
       let resultArray = [];
       const {routes, name, type, grade } = action.payload;
       console.log(name, type, grade);
@@ -25,7 +25,7 @@ const FilteredListReducer = (state = {}, action) => {
       })
         return resultArray;
     }
-    case types.EMPTY_ARRAY: {
+    case c.EMPTY_ARRAY: {
       const emptiedArray = []
         console.log('working');
       return emptiedArray;

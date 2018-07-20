@@ -1,9 +1,9 @@
 import constants from './../constants';
-const {types} = constants
+const { c } = constants
 
 const FullListReducer = (state = {}, action) => {
   switch(action.type) {
-    case types.RECEIVED: {
+    case c.RECEIVED: {
       const fullList = Object.assign({}, action.payload);
 
       fullList.routes.forEach((route) => {

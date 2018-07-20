@@ -1,9 +1,9 @@
 import constants from './../constants';
-const {types} = constants;
+const {c} = constants;
 
 const MyListReducer = (state = [], action) => {
   switch(action.type) {
-    case types.ADD_TO_LIST: {
+    case c.ADD_TO_LIST: {
       console.log(action);
       let checkId = [];
       let newState = state.slice();

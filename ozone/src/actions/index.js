@@ -1,5 +1,5 @@
 import constants from './../constants';
-const { types } = constants
+const { c } = constants
 
 export default function makeCall() {
   let data;
@@ -15,14 +15,14 @@ export default function makeCall() {
 
 function makeCallAsync(data){
   return{
-    type: types.RECEIVED,
+    type: c.RECEIVED,
     payload: data
   }
 }
 
 export function addToList(props, route){
   return {
-    type: types.ADD_TO_LIST,
+    type: c.ADD_TO_LIST,
     payload: route
   }
 }
@@ -31,7 +31,7 @@ export function addToList(props, route){
 
  export function handleSubmitClick(_name, _type, _grade, routes) {
    return {
-     type: types.FILTER,
+     type: c.FILTER,
      payload: {
        name: _name,
        type: _type,
@@ -44,6 +44,6 @@ export function addToList(props, route){
 export function emptyArray() {
   console.log('working');
   return {
-    type: types.EMPTY_ARRAY
+    type: c.EMPTY_ARRAY
   }
 }

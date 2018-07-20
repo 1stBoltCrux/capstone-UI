@@ -4,6 +4,7 @@ import styles from './editmodal.css'
 import okButton from './../imgs/okbutton.svg';
 import { Link } from 'react-router-dom';
 import EditGrade from './EditGrade.js'
+
 class EditModal extends React.Component {
   render() {
     return (
