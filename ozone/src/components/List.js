@@ -7,9 +7,16 @@ import { v4 } from 'uuid';
 
 class List extends React.Component {
   render() {
+    const { routes, filteredList } = this.props
+    console.log(routes);
+    let routeCondition = routes.slice();
+    if (filteredList.length > 0) {
+      routeCondition = filteredList;
+    }
     return (
+
       <div className={styles.listWrapper}>
-        {this.props.routes.map((route, key) =>
+        {routeCondition.map((route, key) =>
           <ListItem
             routeList={this.props.routes}
             type={route.type}

@@ -20,6 +20,7 @@ class App extends Component {
 
     const routes = this.props.fullList.routes
     const myRoutes = this.props.myList
+    const filteredList = this.props.filteredList
     return (
       <div className='main-wrapper'>
         <BrowserRouter>
@@ -28,7 +29,7 @@ class App extends Component {
             <Switch>
               <Route path="/myList" exact component={()=> <MyList myRoutes={myRoutes}/> }/>
               <Route path="/" exact component={()=><Home routes={routes} />}/>
-              <Route path="/list" render={()=> <List routes={routes}/>}/>
+              <Route path="/list" render={()=> <List routes={routes} filteredList={filteredList}/>}/>
               <Route path ="/detailpage" exact component={DetailPage}/>
               <Route path ="/editmodal" exact component={EditModal}/>
             </Switch>
@@ -41,7 +42,8 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     fullList: state.fullList,
-    myList: state.myList
+    myList: state.myList,
+    filteredList: state.filteredList
   }
 }
 
