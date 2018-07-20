@@ -18,7 +18,7 @@ class List extends React.Component {
           routeId={route.id}
           name={route.name}
           rating={route.rating}
-          location={route.location[route.location.length-1]}
+          location={route.location[2]}
           key={v4()}
           />
         )}

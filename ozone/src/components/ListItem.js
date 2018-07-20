@@ -35,7 +35,7 @@ class ListItem extends React.Component {
           <div className={styles.itemInfo}>
             <h3>{this.props.name}</h3>
             <p> {this.props.rating} </p>
-            <p>{this.props.routeId}</p>
+            <p>{this.props.location}</p>
             <img src={star}/>
           </div>
           <div className={styles.expandButton}></div>

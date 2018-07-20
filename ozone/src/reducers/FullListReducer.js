@@ -9,6 +9,11 @@ const FullListReducer = (state = {}, action) => {
       fullList.routes.forEach((route) => {
          let newRouteRating = route.rating.slice(2,4)
          route.starVotes = parseFloat(newRouteRating);
+         if (route.location[3]) {
+           let trimmedLocation = route.location[3].slice(4,route.location[3].length -1)
+           route.location[2] = route.location[2] + ', ' + trimmedLocation;
+         }
+
       })
 
       function compare(a,b){
