@@ -6,10 +6,24 @@ const FilteredListReducer = (state = {}, action) => {
     case types.FILTER: {
       let resultArray = [];
       const {routes, name, type, grade } = action.payload;
-      let filteredArray = routes.filter((route) => {
-        return route.name === name;
+      console.log(name, type, grade);
+      let arrayToFilter = routes.slice();
+      arrayToFilter.forEach((route) => {
+        if (parseFloat(grade) === route.starVotes && route.type === type) {
+          resultArray.push(route);
+          return;
+        } else if ( name === route.name && !grade && !type){
+          resultArray.push(route);
+          return;
+        } else if (parseFloat(grade) === route.starVotes && !type && !name) {
+          resultArray.push(route);
+          return;
+        } else if (type === route.type && !grade && !name) {
+          resultArray.push(route);
+          return;
+        }
       })
-        return filteredArray
+        return resultArray;
     }
   }
   return state;
