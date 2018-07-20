@@ -1,6 +1,11 @@
 .itemInfo h3 {
   color: #89DA2F;
   font-weight: lighter;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0;
 }
 
 .itemInfo p {
@@ -31,7 +36,7 @@
 .trad {
   height: 85%;
   width: 30%;
-  background-image: url(./../imgs/shield.svg);
+  background-image: url(./../imgs/trad.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,7 +46,7 @@
 .sport {
   height: 85%;
   width: 30%;
-  background-image: url(./../imgs/clipboard.svg);
+  background-image: url(./../imgs/bolt.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,7 +74,12 @@
 }
 
 .itemInfo {
-  font-size: .9rem
+  font-size: .9rem;
+  width: 120px;
+  max-height: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .expandButton {
