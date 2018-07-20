@@ -8,7 +8,7 @@ import { emptyArray } from './../actions';
 class List extends React.Component {
   render() {
     const { dispatch } = this.props;
-    console.log(emptyArray);
+
     return (
       <div className={styles.navWrapper}>
         <div className={styles.nav}>

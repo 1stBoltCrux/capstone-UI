@@ -11,18 +11,23 @@ import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import makeCall from './actions'
+import {addListToFirebase} from './actions'
+
+
 
 class App extends Component {
   componentDidMount(){
     this.props.makeCall()
+
   }
 
   render() {
+
     const routes = this.props.fullList.routes
     const myRoutes = this.props.myList
     const filteredList = this.props.filteredList
     return (
-      <div className='main-wrapper'>
+      <div onClick={()=> addListToFirebase(this.props.fullList.routes)} className='main-wrapper'>
         <BrowserRouter>
           <div>
             <Nav />

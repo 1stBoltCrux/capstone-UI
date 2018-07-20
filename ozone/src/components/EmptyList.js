@@ -7,7 +7,6 @@ export default function EmptyList(){
       <div className={styles.emptyListMessage}>
         <p>There are currently no climbing routes in your list.</p>
       </div>
-
     </div>
   )
 }

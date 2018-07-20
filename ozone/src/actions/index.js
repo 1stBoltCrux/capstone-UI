@@ -3,10 +3,17 @@ import firebase from 'firebase';
 const { c, firebaseConfig } = constants;
 
 firebase.initializeApp(firebaseConfig);
-const tickets = firebase.database().ref('fullList');
+const fullListRef = firebase.database().ref('fullList');
+
+
+
+export function addListToFirebase(item){
+  console.log(item);
+  fullListRef.push(item)
+}
+
 
 export default function makeCall() {
-  console.log(firebase);
   let data;
   return dispatch => {
     fetch('https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=45.567&lon=-122.211&maxDistance=1&maxResults=400&minDiff=5.6&maxDiff=5.13&key=200285890-fbff6471f00c42d4b58bbfed57cd6a12').then(
