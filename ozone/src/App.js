@@ -11,19 +11,18 @@ import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 // import makeCall from './actions'
-import {addListToFirebase, watchFireBaseFullListRef} from './actions'
+import {addListToFirebase, watchFireBaseFullListRef, watchFireBaseMyListRef} from './actions'
 
 class App extends Component {
   componentDidMount(){
-    console.log(this.props);
     this.props.watchFireBaseFullListRef()
+    this.props.watchFireBaseMyListRef()
     // this.props.makeCall()
 
   }
 
   render() {
     const routes = this.props.fullList
-    console.log(routes);
     const myRoutes = this.props.myList
     const filteredList = this.props.filteredList
     return (
@@ -54,7 +53,7 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    // makeCall: makeCall,
+    watchFireBaseMyListRef: watchFireBaseMyListRef,
     watchFireBaseFullListRef: watchFireBaseFullListRef}, dispatch);
 }
 

@@ -6,7 +6,7 @@ import star from './../imgs/icon-star.svg'
 import moreInfo from './../imgs/icon-more-info.svg'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addToList } from './../actions'
+import { addToList, watchFireBaseMyListRef } from './../actions'
 
 class DetailPage extends React.Component {
 
@@ -31,7 +31,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=> this.props.dispatch(addToList(this.props, route))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+            <div onClick={()=> this.props.dispatch(addToList(route))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 

@@ -4,6 +4,7 @@ const { c, firebaseConfig } = constants;
 
 firebase.initializeApp(firebaseConfig);
 const fullListRef = firebase.database().ref('fullList');
+const myListRef = firebase.database().ref('myList');
 
 export function watchFireBaseFullListRef() {
   return function(dispatch) {
@@ -19,6 +20,34 @@ export function addListToFirebase(list){
   return {
     type: c.RECEIVED,
     fullList: list
+  }
+}
+
+export function watchFireBaseMyListRef(route){
+  return function(dispatch) {
+    myListRef.on('value', data => {
+      let myList = data.val()
+      dispatch(addMyListToFirebase(myList))
+      // addToList(route, myList)
+      console.log(myList);
+    })
+  }
+}
+
+export function addMyListToFirebase(myList){
+  console.log(myList);
+  return {
+    type: c.SET_MY_LIST,
+    payload: myList
+  }
+}
+
+export function addToList(route, myList){
+  console.log(route);
+  myListRef.push(route)
+  return {
+    type: c.ADD_TO_LIST,
+    // payload: route
   }
 }
 
@@ -42,12 +71,7 @@ export function addListToFirebase(list){
 //   }
 // }
 
-export function addToList(props, route){
-  return {
-    type: c.ADD_TO_LIST,
-    payload: route
-  }
-}
+
 
 
 
