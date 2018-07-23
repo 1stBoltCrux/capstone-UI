@@ -10,19 +10,20 @@ import  EditModal from './components/EditModal.js';
 import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import makeCall from './actions'
+// import makeCall from './actions'
 import {addListToFirebase, watchFireBaseFullListRef} from './actions'
 
 class App extends Component {
   componentDidMount(){
     console.log(this.props);
     this.props.watchFireBaseFullListRef()
-    this.props.makeCall()
+    // this.props.makeCall()
 
   }
 
   render() {
-    const routes = this.props.fullList.routes
+    const routes = this.props.fullList
+    console.log(routes);
     const myRoutes = this.props.myList
     const filteredList = this.props.filteredList
     return (
@@ -53,7 +54,7 @@ const mapStateToProps = state => {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    makeCall: makeCall,
+    // makeCall: makeCall,
     watchFireBaseFullListRef: watchFireBaseFullListRef}, dispatch);
 }
 
