@@ -16,7 +16,6 @@ export function watchFireBaseFullListRef() {
 }
 
 export function addListToFirebase(list){
-  console.log(list);
   return {
     type: c.RECEIVED,
     fullList: list
@@ -29,13 +28,11 @@ export function watchFireBaseMyListRef(route){
       let myList = data.val()
       dispatch(addMyListToFirebase(myList))
       // addToList(route, myList)
-      console.log(myList);
     })
   }
 }
 
 export function addMyListToFirebase(myList){
-  console.log(myList);
   return {
     type: c.SET_MY_LIST,
     payload: myList
@@ -43,11 +40,24 @@ export function addMyListToFirebase(myList){
 }
 
 export function addToList(route, myList){
+  let checkFireId = [];
+  myList.forEach((routeCheck) => {
+    checkFireId.push(routeCheck.id)
+  })
+  console.log(checkFireId);
+  if (checkFireId.includes(route.id) === false){
+    myListRef.push(route);
+
+  } else {
+    console.log('peanuts');
+  }
+  console.log(route.id);
   console.log(route);
-  myListRef.push(route)
+
   return {
     type: c.ADD_TO_LIST,
-    // payload: route
+    route: route,
+    myList: myList
   }
 }
 

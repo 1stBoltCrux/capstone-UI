@@ -4,18 +4,17 @@ const {c} = constants;
 const MyListReducer = (state = [], action) => {
   switch(action.type) {
     case c.ADD_TO_LIST: {
-      console.log(action);
       let checkId = [];
       let newState = state.slice();
       newState.forEach((elem) => {
         checkId.push(elem.id)
       });
       if (newState.length <= 0) {
-        newState.push(action.payload)
-      } else if (checkId.includes(action.payload.id)){
+        newState.push(action.route)
+      } else if (checkId.includes(action.route.id)){
         return newState;
       } else {
-        newState.push(action.payload)
+        newState.push(action.route)
       }
       function compare(a,b){
         if (a.name < b.name)

@@ -11,7 +11,7 @@ import { addToList, watchFireBaseMyListRef } from './../actions'
 class DetailPage extends React.Component {
 
   render() {
-    const {route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
+    const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
@@ -31,7 +31,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=> this.props.dispatch(addToList(route))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+            <div onClick={()=> this.props.dispatch(addToList(route, myRoutes))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 

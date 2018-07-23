@@ -10,7 +10,6 @@ const FullListReducer = (state = {}, action) => {
       Object.keys(action.fullList).forEach((key) => {
         fullList.push(action.fullList[key].route);
       })
-      console.log(fullList);
 
       // fullList.forEach((route) => {
       //   if (route.pitches === '') {

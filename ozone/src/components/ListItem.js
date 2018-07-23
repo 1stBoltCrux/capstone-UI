@@ -26,7 +26,8 @@ class ListItem extends React.Component {
           location: this.props.location,
           pitches: this.props.pitches,
           routeId: this.props.routeId,
-          routeList: this.props.routeList
+          routeList: this.props.routeList,
+          myRoutes: this.props.myRoutes
         }
 
       }}><div className={styles.listItemWrapper}>
