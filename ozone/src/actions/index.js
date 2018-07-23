@@ -40,6 +40,7 @@ export function addMyListToFirebase(myList){
 }
 
 export function addToList(route, myList){
+  console.log(myList);
   let checkFireId = [];
   myList.forEach((routeCheck) => {
     checkFireId.push(routeCheck.id)

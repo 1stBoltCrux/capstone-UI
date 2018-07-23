@@ -11,6 +11,7 @@ import { addToList, watchFireBaseMyListRef } from './../actions'
 class DetailPage extends React.Component {
 
   render() {
+    console.log(this.props.myList);
     const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
     return (
       <div className={styles.detailPageWrapper}>
@@ -31,7 +32,7 @@ class DetailPage extends React.Component {
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=> this.props.dispatch(addToList(route, myRoutes))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+            <div onClick={()=> this.props.dispatch(addToList(route, this.props.myList))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
             <Link to="/editmodal"><div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div></Link>
           </div>
 
@@ -42,4 +43,12 @@ class DetailPage extends React.Component {
   }
 }
 
-export default connect()(DetailPage);
+const mapStateToProps = state => {
+  return {
+    fullList: state.fullList,
+    myList: state.myList,
+    filteredList: state.filteredList
+  }
+}
+
+export default connect(mapStateToProps)(DetailPage);
