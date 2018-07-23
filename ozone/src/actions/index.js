@@ -8,16 +8,18 @@ const fullListRef = firebase.database().ref('fullList');
 export function watchFireBaseFullListRef() {
   return function(dispatch) {
     fullListRef.on('value', data => {
-      return {
-        type: c.RECEIVED,
-        fullList: data.val()
-      }
+      let list = data.val()
+      dispatch(addListToFirebase(list))
     })
   }
 }
 
-export function addListToFirebase(item){
-  console.log(item);
+export function addListToFirebase(list){
+  console.log(list);
+  return {
+    type: c.RECEIVED,
+    fullList: list
+  }
 }
 
 export default function makeCall() {
@@ -34,7 +36,8 @@ export default function makeCall() {
 
 function makeCallAsync(data){
   return{
-    type: c.RECEIVED,
+    // type: c.RECEIVED,
+    type: 'hooplah',
     payload: data
   }
 }

@@ -5,6 +5,10 @@ const FullListReducer = (state = {}, action) => {
   switch(action.type) {
     case c.RECEIVED: {
       const fullList = Object.assign({}, action.payload);
+      console.log(action.fullList);
+      Object.keys(action.fullList).forEach((key) => {
+        console.log(action.fullList[key].route);
+      })
 
       fullList.routes.forEach((route) => {
         if (route.pitches === '') {
