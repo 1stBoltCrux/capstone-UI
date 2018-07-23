@@ -40,7 +40,7 @@ class ListItem extends React.Component {
             <p>{this.props.location}</p>
             <img src={star}/>
           </div>
-          <div onClick={()=>deleteFromFirebase(this.props.route.firebaseId)} className={styles.expandButton}></div>
+          <div className={styles.expandButton}></div>
 
         </div>
 
