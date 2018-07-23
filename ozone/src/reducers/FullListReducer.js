@@ -8,7 +8,8 @@ const FullListReducer = (state = {}, action) => {
       // const fullList = Object.assign({}, action.payload);
       // console.log(action.fullList);
       Object.keys(action.fullList).forEach((key) => {
-        fullList.push(action.fullList[key].route);
+        const routeWithId = Object.assign(action.fullList[key].route, {firebaseId: key});
+        fullList.push(routeWithId);
       })
 
       // fullList.forEach((route) => {
@@ -23,6 +24,12 @@ const FullListReducer = (state = {}, action) => {
       //    }
       //
       // })
+    //   const myList = [];
+    // Object.keys(action.payload).forEach((key) => {
+    //   //this is where i get my firebase id in myList
+    //   const newObject = Object.assign(action.payload[key], { firebaseId : key});
+    //   console.log(newObject);
+    //   myList.push(newObject);
 
       function compare(a,b){
         if (a.starVotes < b.starVotes)

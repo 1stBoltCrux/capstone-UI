@@ -39,6 +39,8 @@ export function addMyListToFirebase(myList){
   }
 }
 
+
+
 export function addToList(route, myList){
   console.log(myList);
   let checkFireId = [];
@@ -60,6 +62,11 @@ export function addToList(route, myList){
     route: route,
     myList: myList
   }
+}
+
+export function deleteFromFirebase(key){
+  console.log(key);
+  myListRef.child(key).remove();
 }
 
 // export default function makeCall() {

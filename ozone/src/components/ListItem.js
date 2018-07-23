@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import styles from './listitem.css';
 import star from './../imgs/icon-star.svg'
 import {Link} from 'react-router-dom';
+import { deleteFromFirebase } from './../actions';
 /* global location */
 /* eslint no-restricted-globals: ["off", "location"] */
 
@@ -30,7 +31,7 @@ class ListItem extends React.Component {
           myRoutes: this.props.myRoutes
         }
 
-      }}><div className={styles.listItemWrapper}>
+      }}><div  className={styles.listItemWrapper}>
         <div className={styles.itemType}></div>
         <div className={styles.itemInfoBox}>
           <div className={styles.itemInfo}>
@@ -39,7 +40,7 @@ class ListItem extends React.Component {
             <p>{this.props.location}</p>
             <img src={star}/>
           </div>
-          <div className={styles.expandButton}></div>
+          <div onClick={()=>deleteFromFirebase(this.props.route.firebaseId)} className={styles.expandButton}></div>
 
         </div>
 

@@ -6,13 +6,14 @@ import star from './../imgs/icon-star.svg'
 import moreInfo from './../imgs/icon-more-info.svg'
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { addToList, watchFireBaseMyListRef } from './../actions'
+import { addToList, watchFireBaseMyListRef, deleteFromFirebase } from './../actions'
 
 class DetailPage extends React.Component {
 
   render() {
-    console.log(this.props.myList);
+
     const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
+    console.log(route.firebaseId);
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
@@ -28,7 +29,7 @@ class DetailPage extends React.Component {
         <div className={styles.buttonBackdrop}>
           <div className={styles.topButtons}>
             <Link to="/editmodal"><div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div></Link>
-            <Link to="/editmodal"><div className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div></Link>
+            <Link to="/editmodal"><div onClick={()=>deleteFromFirebase(route.firebaseId)} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div></Link>
             <Link to="/editmodal"><div className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div></Link>
           </div>
           <div className={styles.bottomButtons}>

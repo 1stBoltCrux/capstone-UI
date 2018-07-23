@@ -28,12 +28,13 @@ const MyListReducer = (state = [], action) => {
     }
 
     case c.SET_MY_LIST: {
-
         const myList = [];
       Object.keys(action.payload).forEach((key) => {
-        myList.push(action.payload[key]);
+        //this is where i get my firebase id in myList
+        const newObject = Object.assign(action.payload[key], { firebaseId : key});
+        console.log(newObject);
+        myList.push(newObject);
       })
-      console.log(myList);
       return myList;
     }
     default:
