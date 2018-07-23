@@ -27,6 +27,16 @@ const MyListReducer = (state = [], action) => {
       newState.sort(compare);
       return newState;
     }
+
+    case c.SET_MY_LIST: {
+
+        const myList = [];
+      Object.keys(action.payload).forEach((key) => {
+        myList.push(action.payload[key]);
+      })
+      console.log(myList);
+      return myList;
+    }
     default:
     return state
   }
