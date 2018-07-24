@@ -75,7 +75,9 @@
 .routeImage {
   height: 350px;
   width: 100%;
-  background-image: url(./../imgs/route-image.png);
+  background-image: url(./../imgs/noimg.png);
+  background-position: center;
+  background-size:cover;
 }
 
 .buttonBackdrop {

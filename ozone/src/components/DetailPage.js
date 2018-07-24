@@ -11,6 +11,7 @@ import EditModal from './EditModal';
 import Notes from './Notes';
 import greencheck from './../imgs/greencheck.svg';
 import checkmark from './../imgs/checkmark.svg';
+import noimg from './../imgs/noimg.png';
 
 class DetailPage extends React.Component {
 constructor(props){
