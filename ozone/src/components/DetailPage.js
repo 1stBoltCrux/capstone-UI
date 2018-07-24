@@ -17,7 +17,8 @@ class DetailPage extends React.Component {
     super(props);
     this.state = {
       notesModal: false,
-      completed: false
+      completed: false,
+      deleted: false
     }
     this.handleNotesModal = this.handleNotesModal.bind(this);
   }
@@ -31,6 +32,12 @@ class DetailPage extends React.Component {
   handleCompleted(){
     this.setState(prevState => ({
       completed: true
+    }));
+  }
+
+  handleDeleted(){
+    this.setState(prevState => ({
+      deleted: true
     }));
   }
 
@@ -99,7 +106,7 @@ class DetailPage extends React.Component {
           </div>
           <div className={styles.bottomButtons}>
             <div onClick={()=> this.props.dispatch(addToList(route, this.props.myList))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
-            <div className={styles.bottomButton2}><p><span className={styles.brightGreen}>Rate</span></p></div>
+            <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
           </div>
 
         </div>
