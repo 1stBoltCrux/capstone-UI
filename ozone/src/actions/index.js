@@ -52,10 +52,9 @@ export function addToList(route, myList){
     myListRef.push(route);
 
   } else {
-    console.log('peanuts');
+    console.log('do not add');
   }
-  console.log(route.id);
-  console.log(route);
+
 
   return {
     type: c.ADD_TO_LIST,

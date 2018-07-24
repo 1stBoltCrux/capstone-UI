@@ -13,6 +13,10 @@
   font-weight: lighter;
 }
 
+.detail {
+  text-align: center;
+}
+
 .detailInfoBox {
   display: flex;
   flex-direction: column;

@@ -10,7 +10,7 @@ export default function Notes(props){
     <div className={styles.notesWrapper}>
       <div className={styles.modalContent}>
       <div className={styles.topBar}>
-        <h3>Place Holder</h3>
+        <h3>Add Notes to this Route</h3>
       <div className={styles.closeButton}></div>
       </div>
       <div className={styles.notesArea}>

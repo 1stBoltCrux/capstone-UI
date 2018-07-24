@@ -32,7 +32,6 @@ const MyListReducer = (state = [], action) => {
       Object.keys(action.payload).forEach((key) => {
         //this is where i get my firebase id in myList
         const newObject = Object.assign(action.payload[key], { firebaseId : key});
-        console.log(newObject);
         myList.push(newObject);
       })
       return myList;

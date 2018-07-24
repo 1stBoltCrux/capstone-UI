@@ -20,11 +20,21 @@ class DetailPage extends React.Component {
 
   render() {
     const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
+    
+    let myRouteCheck = [];
     let editModalVisible = null;
-    if (this.state.editModal) {
+    this.props.myList.forEach((myRoute) => {
+      myRouteCheck.push(myRoute.firebaseId)
+      console.log(myRouteCheck);
+    })
+    if (myRouteCheck.includes(route.firebaseId)) {
+      console.log('ah yes');
       editModalVisible = <Notes firebaseId={route.firebaseId}/>
+    } else {
+      editModalVisible = null;
     }
-    console.log(route.firebaseId);
+
+
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
