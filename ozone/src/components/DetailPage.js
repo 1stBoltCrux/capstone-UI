@@ -13,86 +13,96 @@ import greencheck from './../imgs/greencheck.svg';
 import checkmark from './../imgs/checkmark.svg';
 
 class DetailPage extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      notesModal: false,
-      completed: false,
-      deleted: false
+constructor(props){
+  super(props);
+  this.state = {
+    notesModal: false,
+    completed: false,
+    deleted: false
+  }
+  this.handleNotesModal = this.handleNotesModal.bind(this);
+}
+
+handleNotesModal(){
+  this.setState(prevState => ({
+    notesModal: !prevState.notesModal
+  }));
+}
+
+handleCompleted(){
+  this.setState(prevState => ({
+    completed: true
+  }));
+}
+
+handleDeleted(){
+  this.setState(prevState => ({
+    deleted: true
+  }));
+}
+
+render() {
+
+  const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
+
+  console.log(route);
+
+  let completedStyle = {
+    backgroundImage: `url(${checkmark})`
+  }
+  let routeImage = {
+    backgroundImage: `url(${route.imgMedium})`
+  }
+  console.log(routeImage);
+  if (route.complete || this.state.completed) {
+    completedStyle = {
+      backgroundImage: `url(${greencheck})`
     }
-    this.handleNotesModal = this.handleNotesModal.bind(this);
   }
 
-  handleNotesModal(){
-    this.setState(prevState => ({
-      notesModal: !prevState.notesModal
-    }));
+  let myRouteCheck = [];
+  let editModalVisible = null;
+  let starArray = [];
+  let starCounter = parseInt(route.stars)
+  let gradeButton = null;
+  let completeButton = null;
+  let notesButton = null;
+  let deleteButton = null;
+  let addToListButton = <div onClick={()=> this.props.dispatch(addToList(route, this.props.myList))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
+
+
+  while (starCounter > 0) {
+    starCounter --
+    starArray.push(star)
   }
 
-  handleCompleted(){
-    this.setState(prevState => ({
-      completed: true
-    }));
+  this.props.myList.forEach((myRoute) => {
+    myRouteCheck.push(myRoute.firebaseId)
+  })
+
+  if (route.imgMedium === '') {
+    routeImage = null;
   }
 
-  handleDeleted(){
-    this.setState(prevState => ({
-      deleted: true
-    }));
-  }
-
-  render() {
-
-
-
-    const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
-
-    console.log(route);
-
-    let completedStyle = {
-      backgroundImage: `url(${checkmark})`
-    }
-    if (route.complete || this.state.completed) {
-      completedStyle = {
-        backgroundImage: `url(${greencheck})`
-      }
-    }
-
-    let starArray = [];
-    let starCounter = parseInt(route.stars)
-
-    let gradeButton = null;
-    let completeButton = null;
-    let notesButton = null;
-    let deleteButton = null;
-
-    while (starCounter > 0) {
-      starCounter --
-      starArray.push(star)
-    }
-    let myRouteCheck = [];
-    let editModalVisible = null;
-    this.props.myList.forEach((myRoute) => {
-      myRouteCheck.push(myRoute.firebaseId)
-    })
-    if (myRouteCheck.includes(route.firebaseId) && this.state.notesModal) {
-      editModalVisible = <Notes
+  if (myRouteCheck.includes(route.firebaseId) && this.state.notesModal) {
+    editModalVisible = <Notes
       onNotesModal={this.handleNotesModal}
       firebaseId={route.firebaseId}
       name={name}
-    notes={route.note}/>
+      notes={route.note}/>
 
-  } else if (myRouteCheck.includes(route.firebaseId)){
+    } else if (myRouteCheck.includes(route.firebaseId)){
 
-    gradeButton = <div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
+      gradeButton = <div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
 
-    completeButton = <div style={completedStyle} onClick={()=>{ this.handleCompleted(); this.props.dispatch(handleSubmitComplete(route.firebaseId))}} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div>
+      completeButton = <div style={completedStyle} onClick={()=>{ this.handleCompleted(); this.props.dispatch(handleSubmitComplete(route.firebaseId))}} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div>
 
-    notesButton = <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
+      notesButton = <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
 
-    deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
+      deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
 
-  } else {
+      addToListButton = null;
+    } else {
       editModalVisible = null;
     }
 
@@ -100,30 +110,28 @@ class DetailPage extends React.Component {
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
-            <div className={styles.detail}><h3>{name}</h3></div>
-            <div className={styles.detail}><p>{rating}</p></div>
-            <div className={styles.detail}><p>{location}</p></div>
-            <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
-            <div className={styles.starWrapper}>
-              {starArray.map((star, i)=>
-                <div className={styles.detail} key={i}><img src={star}/></div>
-              )}
-            </div>
-
-            <div className={styles.detail} className={styles.infoButton}><a href={route.url}> <button>More Info</button></a></div>
+          <div className={styles.detail}><h3>{name}</h3></div>
+          <div className={styles.detail}><p>{rating}</p></div>
+          <div className={styles.detail}><p>{location}</p></div>
+          <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
+          <div className={styles.starWrapper}>
+            {starArray.map((star, i)=>
+              <div className={styles.detail} key={i}><img src={star}/></div>
+            )}
+          </div>
+          <div className={styles.detail} className={styles.infoButton}><a href={route.url}> <button>More Info</button></a></div>
         </div>
-        <div className={styles.routeImage}>
+        <div style={routeImage} className={styles.routeImage}>
         </div>
         <div className={styles.buttonBackdrop}>
           <div className={styles.topButtons}>
             {gradeButton}
             {completeButton}
             {notesButton}
-            {deleteButton}
           </div>
           <div className={styles.bottomButtons}>
-            <div onClick={()=> this.props.dispatch(addToList(route, this.props.myList))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
-
+            {deleteButton}
+            {addToListButton}
           </div>
 
         </div>

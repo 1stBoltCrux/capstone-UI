@@ -37,11 +37,9 @@ const MyListReducer = (state = [], action) => {
       return myList;
     }
     case c.NOTES: {
-      console.log(state);
       return state;
     }
     case c.COMPLETE: {
-      console.log('heyehehwn');
       return state;
     }
     default:

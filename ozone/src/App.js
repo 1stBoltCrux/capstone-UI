@@ -10,15 +10,12 @@ import  EditModal from './components/EditModal.js';
 import {BrowserRouter, Switch, Route, withRouter} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-// import makeCall from './actions'
-import {addListToFirebase, watchFireBaseFullListRef, watchFireBaseMyListRef} from './actions'
+import {addListToFirebase, watchFireBaseFullListRef, watchFireBaseMyListRef, addToList} from './actions'
 
 class App extends Component {
   componentDidMount(){
     this.props.watchFireBaseFullListRef()
     this.props.watchFireBaseMyListRef()
-    // this.props.makeCall()
-
   }
 
   render() {
@@ -56,15 +53,5 @@ function mapDispatchToProps(dispatch) {
     watchFireBaseMyListRef: watchFireBaseMyListRef,
     watchFireBaseFullListRef: watchFireBaseFullListRef}, dispatch);
 }
-
- // const doesThisWork = fetch('https://www.mountainproject.com/data/get-routes-for-lat-lon?lat=40.03&lon=-105.25&maxDistance=10&minDiff=5.6&maxDiff=5.10&key=200285890-fbff6471f00c42d4b58bbfed57cd6a12').then(
- //    response => response.json(),
- //    error => console.log('an error occured.', error)
- //  ).then(function(json){
- //    return json;
- //  });
-
-
-
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
