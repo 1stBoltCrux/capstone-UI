@@ -54,10 +54,22 @@
   position: relative;
   top: 5px;
 }
+.infoButton button:focus {
+  outline: 0;
+}
 
-.infoButton img:hover {
+.infoButton button:hover {
   animation: hoverScale .2s ease both;
   cursor: pointer;
+}
+
+@keyframes hoverScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
 }
 
 .routeImage {

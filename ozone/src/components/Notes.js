@@ -5,6 +5,7 @@ import { handleSubmitNotes } from './../actions'
 import { connect } from 'react-redux'
 
 function Notes(props){
+
   const {firebaseId} = props;
   let dynamicNotes = null;
   props.myList.forEach((route)=>{
@@ -14,7 +15,7 @@ function Notes(props){
       dynamicNotes = route.note;
     }
   })
-  console.log(dynamicNotes);
+  console.log(props);
   let _note = null;
   return (
     <div className={styles.notesWrapper}>
@@ -23,13 +24,15 @@ function Notes(props){
         <div className={styles.editHeader}>
           <h3>Add Notes to {props.name}</h3>
         </div>
-      <div className={styles.closeButton}></div>
+      <div onClick={()=>props.onNotesModal()} className={styles.closeButton}></div>
       </div>
       <div className={styles.notesArea}>
         <textarea ref={(textarea) => {_note = textarea;}}/>
-        <button type='submit' onClick={()=> handleSubmitNotes(_note, firebaseId)}>Submit Notes</button>
+        <button type='submit'  onClick={()=>{handleSubmitNotes(_note, firebaseId)}} >Submit Notes</button>
       </div>
-      <p>{dynamicNotes}</p>
+      <div className={styles.notesContent}>
+        <p>{dynamicNotes}</p>
+      </div>
     </div>
       <div className={styles.bottomLogo}></div>
     </div>

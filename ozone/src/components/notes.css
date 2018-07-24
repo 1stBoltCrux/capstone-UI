@@ -8,13 +8,16 @@
 }
 
 .notesWrapper {
+  position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
-  height: 1024px;
+  min-height: 1050px;
+  height: 100vh;
   width: 350px;
-  background-image: url(./../imgs/blurred-bg.png);
+  background-color: rgba(0,0,0,0.8)
 }
 
 .editHeader {
@@ -65,7 +68,7 @@ text-align: center;
 
 .notesArea button{
   width: 50%;
-  margin: auto;
+  margin: 0 auto 20px auto;
   height: 40px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   border-radius: 18px;
@@ -73,7 +76,7 @@ text-align: center;
   background-color: #89DA2F;
   color: white;
   font-size: 1.1rem;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
 .notesArea button:hover{
@@ -103,4 +106,15 @@ text-align: center;
 
 .notesArea textarea:focus{
   outline: 0px;
+}
+
+.notesContent {
+  word-wrap: break-word;
+  width: 95%;
+  margin: auto;
+  color: white;
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 20px;
+  box-sizing: border-box;
 }

@@ -52,3 +52,22 @@
   margin: 0 auto 3vh auto;
   color: white;
 }
+
+.filterRouteButton:hover {
+    animation: hoverScale .2s ease both;
+    cursor:pointer;
+
+}
+
+@keyframes hoverScale {
+  0% {
+    border: 2px solid white;
+    color: white;
+    transform: scale(1);
+  }
+  100% {
+    border: 2px solid #89DA2F;
+    color: #89DA2F;
+    transform: scale(1.03);
+  }
+}
