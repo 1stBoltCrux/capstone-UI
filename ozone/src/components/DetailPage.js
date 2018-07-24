@@ -60,6 +60,12 @@ class DetailPage extends React.Component {
 
     let starArray = [];
     let starCounter = parseInt(route.stars)
+
+    let gradeButton = null;
+    let completeButton = null;
+    let notesButton = null;
+    let deleteButton = null;
+
     while (starCounter > 0) {
       starCounter --
       starArray.push(star)
@@ -76,7 +82,17 @@ class DetailPage extends React.Component {
       name={name}
     notes={route.note}/>
 
-    } else {
+  } else if (myRouteCheck.includes(route.firebaseId)){
+
+    gradeButton = <div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
+
+    completeButton = <div style={completedStyle} onClick={()=>{ this.handleCompleted(); this.props.dispatch(handleSubmitComplete(route.firebaseId))}} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div>
+
+    notesButton = <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
+
+    deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
+
+  } else {
       editModalVisible = null;
     }
 
@@ -100,13 +116,14 @@ class DetailPage extends React.Component {
         </div>
         <div className={styles.buttonBackdrop}>
           <div className={styles.topButtons}>
-            <div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
-            <div style={completedStyle} onClick={()=>{ this.handleCompleted(); this.props.dispatch(handleSubmitComplete(route.firebaseId))}} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div>
-            <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
+            {gradeButton}
+            {completeButton}
+            {notesButton}
+            {deleteButton}
           </div>
           <div className={styles.bottomButtons}>
             <div onClick={()=> this.props.dispatch(addToList(route, this.props.myList))} className={styles.bottomButton1}><p><span className={styles.brightGreen}>Add to List</span></p></div>
-            <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
+
           </div>
 
         </div>
