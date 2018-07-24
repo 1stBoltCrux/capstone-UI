@@ -65,6 +65,10 @@ text-align: center;
   justify-content: center;
   flex-direction: column;
 }
+.closeButton:hover {
+  animation: hoverScale .2s ease both;
+  cursor: pointer;
+}
 
 .notesArea button{
   width: 50%;

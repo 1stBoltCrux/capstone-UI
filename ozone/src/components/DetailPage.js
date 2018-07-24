@@ -46,7 +46,6 @@ render() {
 
   const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
 
-  console.log(route);
 
   let completedStyle = {
     backgroundImage: `url(${checkmark})`
@@ -100,7 +99,7 @@ render() {
 
       notesButton = <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
 
-      deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
+      deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId, this.props.myList); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
 
       addToListButton = null;
     } else {
