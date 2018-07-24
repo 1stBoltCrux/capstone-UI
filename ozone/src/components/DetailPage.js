@@ -111,7 +111,7 @@ render() {
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>
           <div className={styles.detail}><h3>{name}</h3></div>
-          <div className={styles.detail}><p>{rating}</p></div>
+          <div className={styles.detail}><p>{route.type} - </p><p> - {rating}</p></div>
           <div className={styles.detail}><p>{location}</p></div>
           <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
           <div className={styles.starWrapper}>

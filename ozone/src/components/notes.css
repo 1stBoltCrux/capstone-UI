@@ -83,6 +83,10 @@ text-align: center;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
+.notesArea button:focus {
+  outline: 0;
+}
+
 .notesArea button:hover{
   animation: hoverScale .2s ease both;
   cursor: pointer;
