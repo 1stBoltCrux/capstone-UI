@@ -10,6 +10,7 @@ import { deleteFromFirebase } from './../actions';
 class ListItem extends React.Component {
 
   render() {
+
     let starArray = [];
     let starCounter = parseInt(this.props.route.stars);
     while (starCounter > 0) {
@@ -47,8 +48,9 @@ class ListItem extends React.Component {
             <p> {this.props.rating} </p>
             <p>{this.props.location}</p>
             <div className={styles.starWrapper}>
-              {starArray.map((star)=>
-                <img src={star}/>
+              {starArray.map((star, i)=>
+
+                <img src={star} key={i}/>
               )}
 
             </div>

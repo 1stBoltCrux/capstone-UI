@@ -1,0 +1,106 @@
+.topBar a {
+  width: 10%;
+}
+
+.topBar h3 {
+  color: #89DA2F;
+  font-weight: lighter;
+}
+
+.notesWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  height: 1024px;
+  width: 350px;
+  background-image: url(./../imgs/blurred-bg.png);
+}
+
+.editHeader {
+text-align: center;
+}
+
+.bottomLogo {
+  align-self: center;
+  height: 75px;
+  width: 115px;
+  background-image: url(./../imgs/zone-logo.svg);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 3vh;
+}
+
+.closeButton{
+  height: 72px;
+  width: 72px;
+  background-image: url(./../imgs/close.svg);
+}
+
+.contentContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notesContainer {
+  height: 350px;
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 12px;
+  margin-bottom: 3vh;
+  }
+
+
+.notesArea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.notesArea button{
+  width: 50%;
+  margin: auto;
+  height: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 18px;
+  border: none;
+  background-color: #89DA2F;
+  color: white;
+  font-size: 1.1rem;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5)
+}
+
+.notesArea button:hover{
+  animation: hoverScale .2s ease both;
+  cursor: pointer;
+}
+
+@keyframes hoverScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.notesArea textarea{
+  height: 200px;
+  width: 95%;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0px auto 20px auto;
+  border: solid 1px white;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+}
+
+.notesArea textarea:focus{
+  outline: 0px;
+}

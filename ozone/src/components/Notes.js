@@ -10,13 +10,15 @@ export default function Notes(props){
     <div className={styles.notesWrapper}>
       <div className={styles.modalContent}>
       <div className={styles.topBar}>
-        <h3>Add Notes to this Route</h3>
+        <div className={styles.editHeader}>
+          <h3>Add Notes to {props.name}</h3>
+        </div>
       <div className={styles.closeButton}></div>
       </div>
       <div className={styles.notesArea}>
         <textarea ref={(textarea) => {_note = textarea;}}/>
+        <button type='submit' onClick={()=> handleSubmitNotes(_note, firebaseId)}>Submit Notes</button>
       </div>
-      <button type='submit' onClick={()=> handleSubmitNotes(_note, firebaseId)}>Submit Notes</button>
     </div>
       <div className={styles.bottomLogo}></div>
     </div>

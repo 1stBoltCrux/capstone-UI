@@ -14,7 +14,7 @@ class DetailPage extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      editModal: true
+      notesModal: true
     }
   }
 
@@ -37,7 +37,8 @@ class DetailPage extends React.Component {
     })
     if (myRouteCheck.includes(route.firebaseId)) {
       console.log('ah yes');
-      editModalVisible = <Notes firebaseId={route.firebaseId}/>
+      editModalVisible = <Notes firebaseId={route.firebaseId}
+      name={name}/>
     } else {
       editModalVisible = null;
     }
@@ -51,11 +52,12 @@ class DetailPage extends React.Component {
             <div className={styles.detail}><p>{location}</p></div>
             <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
             <div className={styles.starWrapper}>
-              {starArray.map((star)=>
-                <div className={styles.detail}><img src={star}/></div>
+              {starArray.map((star, i)=>
+                <div className={styles.detail} key={i}><img src={star}/></div>
               )}
-            </div>          
-            <div className={styles.detail}><a href={route.url}><img src={moreInfo}/></a></div>
+            </div>
+
+            <div className={styles.detail} className={styles.infoButton}><a href={route.url}> <button>More Info</button></a></div>
         </div>
         <div className={styles.routeImage}>
         </div>
