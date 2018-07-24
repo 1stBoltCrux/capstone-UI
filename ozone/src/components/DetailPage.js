@@ -19,7 +19,10 @@ class DetailPage extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+
     const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
+    console.log(route);
 
     let starArray = [];
     let starCounter = parseInt(route.stars)
@@ -38,7 +41,8 @@ class DetailPage extends React.Component {
     if (myRouteCheck.includes(route.firebaseId)) {
       console.log('ah yes');
       editModalVisible = <Notes firebaseId={route.firebaseId}
-      name={name}/>
+      name={name}
+    notes={route.note}/>
     } else {
       editModalVisible = null;
     }
