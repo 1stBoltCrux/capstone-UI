@@ -40,6 +40,10 @@ const MyListReducer = (state = [], action) => {
       console.log(state);
       return state;
     }
+    case c.COMPLETE: {
+      console.log('heyehehwn');
+      return state;
+    }
     default:
     return state
   }

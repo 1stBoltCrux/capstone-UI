@@ -3,6 +3,7 @@ import ReactDom from 'react-dom';
 import styles from './notes.css';
 import { handleSubmitNotes } from './../actions'
 import { connect } from 'react-redux'
+import greencheck from './../imgs/greencheck.svg'
 
 function Notes(props){
 

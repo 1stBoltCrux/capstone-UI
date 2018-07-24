@@ -79,6 +79,16 @@ export function handleSubmitNotes(_note, key){
   }
 }
 
+export function handleSubmitComplete(key){
+  console.log('complete');
+  myListRef.child(key).update({
+    complete: 'complete'
+  })
+  return {
+    type: c.COMPLETE
+  }
+}
+
 // export default function makeCall() {
 //   let data;
 //   return dispatch => {
