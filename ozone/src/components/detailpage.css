@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.starWrapper {
+  display: flex;
+}
+
 .detailInfoBox {
   display: flex;
   flex-direction: column;

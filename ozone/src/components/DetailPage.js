@@ -20,7 +20,15 @@ class DetailPage extends React.Component {
 
   render() {
     const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
-    
+
+    let starArray = [];
+    let starCounter = parseInt(route.stars)
+    console.log(starCounter);
+    while (starCounter > 0) {
+      starCounter --
+      starArray.push(star)
+    }
+    console.log(starArray);
     let myRouteCheck = [];
     let editModalVisible = null;
     this.props.myList.forEach((myRoute) => {
@@ -42,7 +50,11 @@ class DetailPage extends React.Component {
             <div className={styles.detail}><p>{rating}</p></div>
             <div className={styles.detail}><p>{location}</p></div>
             <div className={styles.detail}><p><span className={styles.brightGreen}>Pitches: {pitches}</span></p></div>
-            <div className={styles.detail}><img src={star}/></div>
+            <div className={styles.starWrapper}>
+              {starArray.map((star)=>
+                <div className={styles.detail}><img src={star}/></div>
+              )}
+            </div>          
             <div className={styles.detail}><a href={route.url}><img src={moreInfo}/></a></div>
         </div>
         <div className={styles.routeImage}>

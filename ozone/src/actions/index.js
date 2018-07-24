@@ -69,8 +69,7 @@ export function deleteFromFirebase(key){
 }
 
 export function handleSubmitNotes(_note, key){
-  console.log(key);
-  console.log(_note.value);
+
   myListRef.child(key).update({
     note: _note.value
   })
