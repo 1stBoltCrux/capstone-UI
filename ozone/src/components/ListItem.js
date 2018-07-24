@@ -10,6 +10,14 @@ import { deleteFromFirebase } from './../actions';
 class ListItem extends React.Component {
 
   render() {
+    let starArray = [];
+    let starCounter = parseInt(this.props.route.stars);
+    while (starCounter > 0) {
+      starCounter --
+      starArray.push(star)
+    }
+
+
     if (this.props.type === 'Trad' || this.props.type === 'Trad, TR') {
       styles.itemType = styles.trad
     } else if (this.props.type === 'Sport'){
@@ -38,7 +46,12 @@ class ListItem extends React.Component {
             <h3>{this.props.name}</h3>
             <p> {this.props.rating} </p>
             <p>{this.props.location}</p>
-            <img src={star}/>
+            <div className={styles.starWrapper}>
+              {starArray.map((star)=>
+                <img src={star}/>
+              )}
+
+            </div>
           </div>
           <div className={styles.expandButton}></div>
 
