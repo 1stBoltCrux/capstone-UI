@@ -19,11 +19,11 @@ class DetailPage extends React.Component {
   }
 
   render() {
+    const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
     let editModalVisible = null;
     if (this.state.editModal) {
-      editModalVisible = <Notes/>
+      editModalVisible = <Notes firebaseId={route.firebaseId}/>
     }
-    const {myRoutes, route, routeId, pitches, name, rating, location, routeList } = this.props.location.state;
     console.log(route.firebaseId);
     return (
       <div className={styles.detailPageWrapper}>

@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import styles from './notes.css';
+import { handleSubmitNotes } from './../actions'
 
-export default function Notes(){
+export default function Notes(props){
+  const {firebaseId} = props;
   let _note = null;
   return (
     <div className={styles.notesWrapper}>
@@ -14,6 +16,7 @@ export default function Notes(){
       <div className={styles.notesArea}>
         <textarea ref={(textarea) => {_note = textarea;}}/>
       </div>
+      <button type='submit' onClick={()=> handleSubmitNotes(_note, firebaseId)}>Submit Notes</button>
     </div>
       <div className={styles.bottomLogo}></div>
     </div>

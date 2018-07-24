@@ -37,6 +37,10 @@ const MyListReducer = (state = [], action) => {
       })
       return myList;
     }
+    case c.NOTES: {
+      console.log(state);
+      return state;
+    }
     default:
     return state
   }

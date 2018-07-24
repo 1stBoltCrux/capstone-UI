@@ -69,6 +69,18 @@ export function deleteFromFirebase(key){
   myListRef.child(key).remove();
 }
 
+export function handleSubmitNotes(_note, key){
+  console.log(key);
+  console.log(_note.value);
+  myListRef.child(key).update({
+    note: _note.value
+  })
+  return {
+    type: c.NOTES,
+    payload: _note
+  }
+}
+
 // export default function makeCall() {
 //   let data;
 //   return dispatch => {
@@ -104,6 +116,8 @@ export function deleteFromFirebase(key){
      }
    }
 }
+
+
 
 export function emptyArray() {
   console.log('working');
