@@ -64,11 +64,11 @@ export function addToList(route, myList){
 }
 
 export function deleteFromFirebase(key, myRoutes){
-  if (myRoutes.length > 1) {
+
       myListRef.child(key).remove();
-  } else {
+
     console.log('do not delete');
-  }
+  
 }
 
 export function handleSubmitNotes(_note, key){
