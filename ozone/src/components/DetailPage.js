@@ -19,7 +19,8 @@ constructor(props){
   this.state = {
     notesModal: false,
     completed: false,
-    deleted: false
+    deleted: false,
+    gradeModal: false
   }
   this.handleNotesModal = this.handleNotesModal.bind(this);
 }
@@ -28,6 +29,10 @@ handleNotesModal(){
   this.setState(prevState => ({
     notesModal: !prevState.notesModal
   }));
+}
+
+handleGradeModal(){
+
 }
 
 handleCompleted(){
@@ -99,7 +104,7 @@ render() {
 
       notesButton = <div onClick={()=>this.handleNotesModal()} className={styles.topButton3}><p><span className={styles.brightGreen}>Notes</span></p></div>
 
-      deleteButton = <div onClick={()=> {deleteFromFirebase(route.firebaseId, this.props.myList); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div>
+      deleteButton = <Link to='/myList'><div onClick={()=> {deleteFromFirebase(route.firebaseId, this.props.myList); this.handleDeleted()}} className={styles.bottomButton2}><p><span className={styles.brightGreen}>Delete</span></p></div></Link>
 
       addToListButton = null;
     } else {
