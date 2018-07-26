@@ -11,12 +11,10 @@ function Notes(props){
   let dynamicNotes = null;
   props.myList.forEach((route)=>{
     if(route.firebaseId === firebaseId){
-      console.log(route.firebaseId);
-      console.log(firebaseId);
+
       dynamicNotes = route.note;
     }
   })
-  console.log(props);
   let _note = null;
   return (
     <div className={styles.notesWrapper}>

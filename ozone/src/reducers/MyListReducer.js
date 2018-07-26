@@ -28,7 +28,6 @@ const MyListReducer = (state = [], action) => {
     }
 
     case c.SET_MY_LIST: {
-      console.log(action.payload);
         const myList = [];
         if (action.payload){
           Object.keys(action.payload).forEach((key) => {

@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDom from 'react-dom';
 import styles from './detailpage.css';
 import Nav from './Nav.js'
 import star from './../imgs/icon-star.svg'
@@ -63,7 +62,6 @@ render() {
   let routeImage = {
     backgroundImage: `url(${route.imgMedium})`
   }
-  console.log(route.firebaseId);
   if (route.complete || this.state.completed) {
     completedStyle = {
       backgroundImage: `url(${greencheck})`
@@ -120,8 +118,6 @@ render() {
     } else {
       editModalVisible = null;
     }
-
-
     return (
       <div className={styles.detailPageWrapper}>
         <div className={styles.detailInfoBox}>

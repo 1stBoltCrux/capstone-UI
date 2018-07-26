@@ -37,12 +37,12 @@ class Home extends React.Component {
               <option value={null}></option>
               <option value='Sport'>Sport</option>
               <option value='Trad'>Trad</option>
-              <option value='Mixed'>Mixed</option>
+              <option value='Trad, Sport'>Mixed</option>
             </select></div>
           </div>
           <div onClick={()=> this.props.dispatch(handleSubmitClick(this._name.value, this._type.value, this._grade.value, routes))} className={styles.filterRouteButton}><p>Filter Route List</p></div>
 
-          <div className={styles.filterMyList}>
+          {/* <div className={styles.filterMyList}>
             <div className={styles.filterRoute}>
               <div className={styles.filterBox} id="filter-title"><p>Filter My List</p></div>
             <div className={styles.filterBox}><p>name:</p><input type='text'></input></div>
@@ -50,7 +50,7 @@ class Home extends React.Component {
             <div className={styles.filterBox}><p>type:</p><select></select></div>
           </div>
           </div>
-          <div className={styles.filterRouteButton}><p>Filter My List</p></div>
+          <div className={styles.filterRouteButton}><p>Filter My List</p></div> */}
         </div>
 
     </div>

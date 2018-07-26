@@ -6,7 +6,6 @@ const FilteredListReducer = (state = {}, action) => {
     case c.FILTER: {
       let resultArray = [];
       const {routes, name, type, grade } = action.payload;
-      console.log(name, type, grade);
       let arrayToFilter = routes.slice();
       arrayToFilter.forEach((route) => {
         if (parseFloat(grade) === route.starVotes && route.type === type) {
@@ -27,7 +26,6 @@ const FilteredListReducer = (state = {}, action) => {
     }
     case c.EMPTY_ARRAY: {
       const emptiedArray = []
-        console.log('working');
       return emptiedArray;
     }
   }

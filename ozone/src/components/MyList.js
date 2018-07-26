@@ -8,7 +8,6 @@ import EmptyList from './EmptyList.js'
 
 class MyList extends React.Component {
   render() {
-    console.log(this.props.myRoutes);
     let emptyList = null;
     if (this.props.myRoutes.length <= 0) {
       emptyList = <EmptyList/>

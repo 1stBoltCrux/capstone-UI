@@ -8,7 +8,6 @@ import { v4 } from 'uuid';
 class List extends React.Component {
   render() {
     const { routes, filteredList } = this.props
-    console.log(this.props);
     let routeCondition = routes.slice();
     if (filteredList.length > 0) {
       routeCondition = filteredList;

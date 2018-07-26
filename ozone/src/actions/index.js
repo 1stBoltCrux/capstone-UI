@@ -42,17 +42,17 @@ export function addMyListToFirebase(myList){
 
 
 export function addToList(route, myList){
-  console.log(myList);
+
   let checkFireId = [];
   myList.forEach((routeCheck) => {
     checkFireId.push(routeCheck.id)
   })
-  console.log(checkFireId);
+
   if (checkFireId.includes(route.id) === false){
     myListRef.push(route);
 
   } else {
-    console.log('do not add');
+
   }
 
 
@@ -64,11 +64,7 @@ export function addToList(route, myList){
 }
 
 export function deleteFromFirebase(key, myRoutes){
-
       myListRef.child(key).remove();
-
-    console.log('do not delete');
-
 }
 
 export function handleSubmitNotes(_note, key){
@@ -83,7 +79,6 @@ export function handleSubmitNotes(_note, key){
 }
 
 export function handleSubmitComplete(key){
-  console.log('complete');
   myListRef.child(key).update({
     complete: 'complete'
   })
@@ -131,7 +126,6 @@ export function handleSubmitComplete(key){
 
 
 export function emptyArray() {
-  console.log('working');
   return {
     type: c.EMPTY_ARRAY
   }
@@ -139,7 +133,6 @@ export function emptyArray() {
 
 export function handleSubmitRadio(event, grade, additionalGrade, key){
     event.preventDefault();
-    console.log(key);
     if (additionalGrade === null){
       additionalGrade = '';
     }
