@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { addToList, watchFireBaseMyListRef, deleteFromFirebase, handleSubmitComplete } from './../actions';
 import EditModal from './EditModal';
+import EditGrade from './EditGrade';
 import Notes from './Notes';
 import greencheck from './../imgs/greencheck.svg';
 import checkmark from './../imgs/checkmark.svg';
@@ -23,6 +24,7 @@ constructor(props){
     gradeModal: false
   }
   this.handleNotesModal = this.handleNotesModal.bind(this);
+  this.handleGradeModal = this.handleGradeModal.bind(this);
 }
 
 handleNotesModal(){
@@ -32,7 +34,9 @@ handleNotesModal(){
 }
 
 handleGradeModal(){
-
+  this.setState(prevState => ({
+    gradeModal: !prevState.gradeModal
+  }))
 }
 
 handleCompleted(){
@@ -96,9 +100,13 @@ render() {
       name={name}
       notes={route.note}/>
 
+    } else if (myRouteCheck.includes(route.firebaseId) && this.state.gradeModal) {
+      editModalVisible = <EditGrade
+                        rating={rating}
+                        onGradeModal={this.handleGradeModal}/>
     } else if (myRouteCheck.includes(route.firebaseId)){
 
-      gradeButton = <div className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
+      gradeButton = <div onClick={()=> this.handleGradeModal()} className={styles.topButton1}><p><span className={styles.brightGreen}>Grade</span></p></div>
 
       completeButton = <div style={completedStyle} onClick={()=>{ this.handleCompleted(); this.props.dispatch(handleSubmitComplete(route.firebaseId))}} className={styles.topButton2}><p><span className={styles.brightGreen}>Complete</span></p></div>
 

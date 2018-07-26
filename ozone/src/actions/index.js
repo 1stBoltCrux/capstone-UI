@@ -68,7 +68,7 @@ export function deleteFromFirebase(key, myRoutes){
       myListRef.child(key).remove();
 
     console.log('do not delete');
-  
+
 }
 
 export function handleSubmitNotes(_note, key){

@@ -24,8 +24,8 @@ class EditGrade extends React.Component {
     }
     return(
       <div className={styles.editGradeWrapper}>
-
-        <div className={styles.shield}><p><span className={styles.yourGrade}>5.11+</span></p></div>
+        <div className={styles.closeButton} onClick={()=>this.props.onGradeModal()}></div>
+        <div className={styles.shield}><p><span className={styles.yourGrade}>{this.props.rating}</span></p></div>
         <div className={styles.gradeDropdown} onClick={this.handleClick}></div>
         {menuVisibility}
       </div>
