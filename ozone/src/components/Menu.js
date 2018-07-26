@@ -6,18 +6,18 @@ import styles from './menu.css';
 import { connect } from 'react-redux'
 import { handleSubmitRadio } from './../actions'
 
+
 class Menu extends React.Component {
   constructor(props){
     super(props)
     this.state = {
+      update: false,
       grade: null,
       additionalGrade: null
     }
     this.handleChangeGrade = this.handleChangeGrade.bind(this)
     this.handleChangeadditionalGrade = this.handleChangeadditionalGrade.bind(this)
   }
-
-
 
   handleChangeGrade(e){
     console.log(this.state);
@@ -170,6 +170,7 @@ class Menu extends React.Component {
         </div>
         <button onClick={(event)=> this.props.dispatch(handleSubmitRadio(event, this.state.grade, this.state.additionalGrade, this.props.firebaseId))} type='submit' className={styles.okButton}> <img src={okButton}/></button>
         </form>
+        {this.state.update}
       </div>
 
     );

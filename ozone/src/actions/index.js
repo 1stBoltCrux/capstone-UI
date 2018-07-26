@@ -140,6 +140,9 @@ export function emptyArray() {
 export function handleSubmitRadio(event, grade, additionalGrade, key){
     event.preventDefault();
     console.log(key);
+    if (additionalGrade === null){
+      additionalGrade = '';
+    }
     const newGrade = grade + additionalGrade;
     myListRef.child(key).update({
       rating: newGrade

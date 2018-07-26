@@ -1,3 +1,5 @@
+
+
 .gradeMenuWrapper {
   display: flex;
   flex-direction: column;
@@ -14,13 +16,19 @@
 
 
 .valueBox input {
-  height: 25px;
+  height: 24px;
   width: 100px;
   background-color: transparent;
   border: 1px solid black;
   outline: none;
   margin: 0;
   box-sizing: border-box;
+  opacity: 0;
+
+}
+
+.valueBox:active {
+  border: solid 2px white;
 }
 
 .leftColumn {
@@ -36,6 +44,8 @@
 .okButton {
   margin-top: 2vh;
   width: 130px;
+  background-color: transparent;
+  border: none;
 }
 
 .okButton:hover {
