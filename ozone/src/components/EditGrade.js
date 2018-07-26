@@ -18,7 +18,7 @@ class EditGrade extends React.Component {
   render()  {
     let menuVisibility = null;
     if (this.state.isMenuHidden === false) {
-      menuVisibility = <Menu/>;
+      menuVisibility = <Menu firebaseId={this.props.firebaseId}/>;
     } else {
       menuVisibility = null;
     }

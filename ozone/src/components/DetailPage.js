@@ -62,7 +62,7 @@ render() {
   let routeImage = {
     backgroundImage: `url(${route.imgMedium})`
   }
-  console.log(routeImage);
+  console.log(route.firebaseId);
   if (route.complete || this.state.completed) {
     completedStyle = {
       backgroundImage: `url(${greencheck})`
@@ -102,6 +102,7 @@ render() {
 
     } else if (myRouteCheck.includes(route.firebaseId) && this.state.gradeModal) {
       editModalVisible = <EditGrade
+                        firebaseId={route.firebaseId}
                         rating={rating}
                         onGradeModal={this.handleGradeModal}/>
     } else if (myRouteCheck.includes(route.firebaseId)){

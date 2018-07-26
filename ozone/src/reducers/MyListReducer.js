@@ -48,6 +48,8 @@ const MyListReducer = (state = [], action) => {
     case c.COMPLETE: {
       return state;
     }
+    case c.CHANGE_GRADE:
+      return state;
     default:
     return state
   }

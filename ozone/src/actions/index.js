@@ -136,3 +136,16 @@ export function emptyArray() {
     type: c.EMPTY_ARRAY
   }
 }
+
+export function handleSubmitRadio(event, grade, additionalGrade, key){
+    event.preventDefault();
+    console.log(key);
+    const newGrade = grade + additionalGrade;
+    myListRef.child(key).update({
+      rating: newGrade
+    })
+
+    return {
+      type: c.CHANGE_GRADE,
+    }
+  }

@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 import './editgrade.css';
 import okButton from './../imgs/okbutton.svg';
 import styles from './menu.css';
+import { connect } from 'react-redux'
+import { handleSubmitRadio } from './../actions'
 
 class Menu extends React.Component {
   constructor(props){
@@ -11,16 +13,11 @@ class Menu extends React.Component {
       grade: null,
       additionalGrade: null
     }
-    this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChangeGrade = this.handleChangeGrade.bind(this)
     this.handleChangeadditionalGrade = this.handleChangeadditionalGrade.bind(this)
-
   }
 
-  handleSubmit(e){
-    e.preventDefault();
 
-  }
 
   handleChangeGrade(e){
     console.log(this.state);
@@ -171,7 +168,7 @@ class Menu extends React.Component {
           </div>
 
         </div>
-        <div className={styles.okButton}><img src={okButton}/></div>
+        <button onClick={(event)=> this.props.dispatch(handleSubmitRadio(event, this.state.grade, this.state.additionalGrade, this.props.firebaseId))} type='submit' className={styles.okButton}> <img src={okButton}/></button>
         </form>
       </div>
 
@@ -179,4 +176,4 @@ class Menu extends React.Component {
   }
 }
 
-export default Menu;
+export default connect()(Menu);
