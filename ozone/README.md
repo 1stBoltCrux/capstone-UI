@@ -1,6 +1,10 @@
+## PROJECT CURRENTLY NEEDS FIREBASE CONFIG FILE TO BUILD
+
+
 ## non-comprehensive list of dependencies
 
-redux, react-redux, react-router-dom, connected-react-router, redux-thunk, history
+redux, react-redux, react-router-dom, connected-react-router, redux-thunk, history,
+firebase
 
 
 
